@@ -1,0 +1,34 @@
+package es11;
+
+import java.util.Vector;
+
+public class SIM {
+
+	private String numeroTelefono;
+	private float creditoDisponibileEuro;
+	private Vector<Telefonata> telefonate;
+	
+	public SIM(String numeroTelefono, float creditoDisponibileEuro) {
+		super();
+		this.numeroTelefono = numeroTelefono;
+		this.creditoDisponibileEuro = creditoDisponibileEuro;
+		this.telefonate = new Vector<Telefonata>();
+	}
+
+	public String getNumeroTelefono() {
+		return numeroTelefono;
+	}
+
+	public float getCreditoDisponibileEuro() {
+		return creditoDisponibileEuro;
+	}
+
+	public Vector<Telefonata> getTelefonate() {
+		return telefonate;
+	}
+	
+	
+	
+	
+	
+}

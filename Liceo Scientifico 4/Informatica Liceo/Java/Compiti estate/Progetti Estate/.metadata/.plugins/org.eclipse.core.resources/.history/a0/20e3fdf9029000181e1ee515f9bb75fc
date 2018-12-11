@@ -1,0 +1,17 @@
+package es11;
+
+public class Telefonata {
+	
+	private int durataMin;
+	
+	public Telefonata(int min) {
+		this.durataMin = min;
+	}
+
+	public int getDurataMin() {
+		return durataMin;
+	}
+	
+	
+
+}

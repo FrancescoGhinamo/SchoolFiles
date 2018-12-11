@@ -1,0 +1,5 @@
+package regnoVegetale;
+
+public class PiantaFioriNonCompleti extends PiantaFoglieNervatureNonParallele {
+
+}

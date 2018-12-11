@@ -1,0 +1,94 @@
+package es10;
+
+import java.util.Vector;
+
+import common.Tastiera;
+
+public class Garage {
+
+	private Vector<Posto> posti;
+	
+	public Garage() {
+		posti = new Vector<Posto>();
+	}
+	
+	public Auto creaAuto(Veicolo _v) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Inserire il numero di porte: ");
+		int porte = t.leggiInt();
+		Alimentazione alim = null;
+		System.out.println(" Scegliere il tipo di alimentazione:");
+		System.out.println(" 1 - benzina");
+		System.out.println(" 2 - diesel");
+		System.out.print(" Inserire la scelta: ");
+		int s = t.leggiInt();
+		switch(s) {
+		case 1:
+			alim = Alimentazione.BENZINA;
+			break;
+		case 2:
+			alim = Alimentazione.DIESEL;
+			break;
+			
+		default:
+			alim = Alimentazione.BENZINA;
+		}
+		
+		return new Auto(_v.getMarca(), _v.getAnno(), _v.getCilindrata(), porte, alim);
+	}
+	
+	public Moto creaMoto(Veicolo _v) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Inserire il numero di tempi: ");
+		int tempi = t.leggiInt();
+		return new Moto(_v.getMarca(), _v.getAnno(), _v.getCilindrata(), tempi);
+	}
+	
+	public Furgone creaFurgone(Veicolo _v) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Inserire la capacita': ");
+		float cap = t.leggiFloat();
+		return new Furgone(_v.getMarca(), _v.getAnno(), _v.getCilindrata(), cap);
+	}
+	
+	public Veicolo creaVeicolo() {
+		Veicolo v = null;
+		Tastiera t = new Tastiera();
+		System.out.println("\n Registrazione di un nuovo veicolo:");
+		System.out.print(" Inserire la marca: ");
+		String marca = t.leggiString();
+		System.out.print(" Inserire l'anno di immatricolazione: ");
+		int anno = t.leggiInt();
+		System.out.print(" Inserire la cilindrata: ");
+		int cil = t.leggiInt();
+		System.out.println(" Scegliere il tipo di veicolo: ");
+		System.out.println(" 1 - auto");
+		System.out.println(" 2 - moto");
+		System.out.println(" 3 - furgone");
+		System.out.print(" Inserire la scelta: ");
+		int scelta = t.leggiInt();
+		switch(scelta) {
+		case 1:
+			break;
+			
+		case 2:
+			break;
+		
+		case 3:
+			break;
+			
+		default:
+			System.out.println(" Veicolo non specificato");
+		}
+		
+		return v;
+	}
+	
+	public String toString() {
+		String ris = "\n\t GARAGE";
+		for(int c = 0; c < posti.size(); c++) {
+			ris += "\n"+posti.elementAt(c).toString();
+		}
+		return ris;
+	}
+}

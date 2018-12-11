@@ -1,0 +1,4 @@
+Funzione eta(annoNascita)
+inizio
+	restituisci annoCorrente - annoNascita
+fine

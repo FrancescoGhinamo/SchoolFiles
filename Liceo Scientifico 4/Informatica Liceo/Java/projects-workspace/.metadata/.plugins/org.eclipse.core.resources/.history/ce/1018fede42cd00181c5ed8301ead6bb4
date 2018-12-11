@@ -1,0 +1,48 @@
+package euqazione.gui;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class EquazioneGUI extends JFrame implements ActionListener {
+	
+	private JTextField txtIn;
+	private JButton btnCalcola;
+	
+	private DefaultListModel<String> listModel;
+	private JList<String> listOut;
+	
+	public EquazioneGUI() {
+		setExtendedState(MAXIMIZED_BOTH);
+		
+		
+	}
+	
+	public void initComponent() {
+		txtIn = new JTextField(20);
+		btnCalcola = new JButton("Calcola");
+		btnCalcola.addActionListener(this);
+		JPanel inP = new JPanel(new FlowLayout());
+		inP.add(txtIn);
+		inP.add(btnCalcola);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

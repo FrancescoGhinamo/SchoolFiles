@@ -1,0 +1,17 @@
+Dati in input: due equzioni nella forma y = mx + q (m1, q1, m2, q2)
+Dati in output: punto di intersezione delle rette (xp, yp)
+
+Pseudocodifica
+inizio
+	se m1 = m2 allora
+		se q1 = q2 allora
+			restituisci rette coincidenti
+		altrimenti
+			restitusci rette parallele
+		fine se
+	altrimenti
+		xp = (q2 - q1) / (m1 - m2)
+		yp = m1 * xp + q1
+		restituisci punto(xp, yp)
+	fine se
+fine

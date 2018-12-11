@@ -1,0 +1,45 @@
+package wrapper;
+
+import wrapper.eccezzioni.*;
+
+
+public class NumeroReale {
+
+	private double val;
+	
+	
+
+	public NumeroReale(double val) throws NaNException {
+		super();
+		if(val != Double.NaN)
+			this.val = val;
+		else 
+			throw new NaNException();
+	}
+	
+	public double radiceQuadrata() throws NumeroNegativoException{
+		double sqrt = 0;
+		if(val > 0) {
+			sqrt = Math.sqrt(val);
+		}
+		else {
+			throw new NumeroNegativoException();
+		}
+		return sqrt;
+	}
+	
+	public double potenzaDiDue() {
+		return Math.pow(val, 2);
+	}
+
+
+
+	public double getVal() {
+		return val;
+	}
+
+	
+	
+	
+	
+}

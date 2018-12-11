@@ -1,0 +1,62 @@
+package euqazione.gui;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+
+public class EquazioneGUI extends JFrame implements ActionListener {
+	
+	private JTextField txtIn;
+	private JButton btnCalcola;
+	
+	private DefaultListModel<String> listModel;
+	private JList<String> listOut;
+	
+	public EquazioneGUI() {
+		super("Equazione lineare");
+		setExtendedState(MAXIMIZED_BOTH);
+		initComponents();
+		
+	}
+	
+	public void initComponents() {
+		txtIn = new JTextField(20);
+		btnCalcola = new JButton("Calcola");
+		btnCalcola.addActionListener(this);
+		JPanel inP = new JPanel(new FlowLayout());
+		inP.add(txtIn);
+		inP.add(btnCalcola);
+		
+		listModel = new DefaultListModel<String>();
+		listOut = new JList<String>();
+		listOut.setLayout(new GridLayout(100, 2));
+		JScrollPane outP = new JScrollPane(listOut);
+		
+		setLayout(new BorderLayout());
+		
+		add(inP, BorderLayout.NORTH);
+		add(outP, BorderLayout.CENTER);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

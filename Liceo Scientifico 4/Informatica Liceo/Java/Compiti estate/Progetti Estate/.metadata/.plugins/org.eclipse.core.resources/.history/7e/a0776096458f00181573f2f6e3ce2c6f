@@ -1,0 +1,7 @@
+package es10;
+
+public class Auto extends Veicolo {
+
+	private int porte;
+	private Alimentazione alimentazione;
+}

@@ -1,0 +1,7 @@
+package gui.visualizzazione;
+
+import javax.swing.JFrame;
+
+public class Visulizzatore extends JFrame {
+
+}

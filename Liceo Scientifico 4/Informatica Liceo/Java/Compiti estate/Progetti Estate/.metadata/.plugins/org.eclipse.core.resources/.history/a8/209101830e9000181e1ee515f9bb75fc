@@ -1,0 +1,5 @@
+package libreria.interazione;
+
+public class Cliente {
+
+}

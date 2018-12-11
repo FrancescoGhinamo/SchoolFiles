@@ -1,0 +1,65 @@
+package animali;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+/**
+ * classe realizzata per rappresentare un animale generico
+ * @author Francesco
+ *
+ */
+public class Animale {
+
+	private String nome;
+	private String matricola;
+	private Date dataNascita;
+	private Date dataArrivo;
+	private float pesoKg;
+
+	public void stampaCaratteristiche() {
+
+	}
+
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getMatricola() {
+		return matricola;
+	}
+	public void setMatricola(String matricola) {
+		this.matricola = matricola;
+	}
+	public Date getDataNascita() {
+		return dataNascita;
+	}
+	public void setDataNascita(Date dataNascita) {
+		this.dataNascita = dataNascita;
+	}
+	public Date getDataArrivo() {
+		return dataArrivo;
+	}
+	public void setDataArrivo(Date dataArrivo) {
+		this.dataArrivo = dataArrivo;
+	}
+	public float getPesoKg() {
+		return pesoKg;
+	}
+	public void setPesoKg(float pesoKg) {
+		this.pesoKg = pesoKg;
+	}
+	
+	public String toString() {
+		SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
+		String ris = "";
+		ris += "\n Nome: "+nome;
+		ris += "\n Matricola: "+matricola;
+		ris += "\n Data di nasctita: "+fmt.format(dataNascita);
+		ris += "\n Data di arrivo: "+fmt.format(dataArrivo);
+		ris += "\n Peso: "+pesoKg+" kg";
+		return ris;
+	}
+
+}

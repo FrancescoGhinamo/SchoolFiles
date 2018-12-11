@@ -1,0 +1,79 @@
+package libreria.interazione;
+
+import java.util.GregorianCalendar;
+import java.util.Vector;
+
+import libreria.input.Tastiera;
+import libreria.libro.Autore;
+import libreria.libro.Libro;
+
+public class Libreria {
+
+	private Vector<Libro> libri;
+	private Vector<Cliente> clientiRegistrati;
+	
+	public Libreria() {
+		this.libri = new Vector<Libro>();
+		this.clientiRegistrati = new Vector<Cliente>();
+	}
+	
+	public Autore creaAutore() {
+		Tastiera t = new Tastiera();
+		System.out.println(" Registrazione di un autore");
+		System.out.print(" Inserire il codice: ");
+		String cod = t.leggiString();
+		System.out.print(" Inserire il nome: ");
+		String nome = t.leggiString();
+		System.out.print(" Inserire il cognome: ");
+		String cognome = t.leggiString();
+		System.out.print(" Inserire la data di nascita: ");
+		GregorianCalendar data = t.leggiGreogrianCalendar();
+		return new Autore(cod, nome, cognome, data);
+	}
+	
+	public Cliente creaCliente() {
+		Tastiera t = new Tastiera();
+		System.out.println(" Registrazione di un cliente");
+		System.out.print(" Inserire il nome: ");
+		String nome = t.leggiString();
+		System.out.print(" Inserire il cognome: ");
+		String cognome = t.leggiString();
+		System.out.print(" Inserire il codice fiscale: ");
+		String codiceF = t.leggiString();
+		System.out.print(" Inserire la data di nascita: ");
+		GregorianCalendar data = t.leggiGreogrianCalendar();
+		return new Cliente(nome, cognome, codiceF, data);
+	}
+	
+	public Vector<Autore> registraAutori() {
+		Tastiera t = new Tastiera();
+		Vector<Autore> _autori = new Vector<Autore>();
+		boolean continua = false;
+		do {
+			_autori.add(creaAutore());
+			System.out.print("\n Aggiungere un altro autore? ");
+			continua = t.leggiBoolean();
+		}
+		while(continua);
+		return _autori;
+	}
+	
+	public Libro creaLibro() {
+		Tastiera t = new Tastiera();
+		System.out.println("\n\tREGISTRAZIONE DI UN LIBRO");
+		System.out.print(" Inserire il codice ISBN: ");
+		String isbn = t.leggiString();
+		System.out.print(" Inserire il titolo: ");
+		String titolo = t.leggiString();
+		System.out.print(" Inserire il genere: ");
+		String genere = t.leggiString();
+		System.out.print(" Inserire il prezzo: ");
+		float prezzo = t.leggiFloat();
+		System.out.println(" Registrare gli autori:\n");
+		return new Libro(isbn, titolo, genere, prezzo, registraAutori());
+	}
+	
+	public void aggiungiLibro(Libro l) {
+		libri.add(l);
+	}
+}

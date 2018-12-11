@@ -1,0 +1,33 @@
+package libreria.interazione;
+
+import java.util.GregorianCalendar;
+import java.util.Vector;
+
+import libreria.input.Tastiera;
+import libreria.libro.Autore;
+import libreria.libro.Libro;
+
+public class Libreria {
+
+	private Vector<Libro> libri;
+	private Vector<Cliente> clientiRegistrati;
+	
+	public Libreria() {
+		this.libri = new Vector<Libro>();
+		this.clientiRegistrati = new Vector<Cliente>();
+	}
+	
+	public Autore creaAutore() {
+		Tastiera t = new Tastiera();
+		System.out.println(" Registrazione di un autore");
+		System.out.print(" Inserire il codice: ");
+		String cod = t.leggiString();
+		System.out.print(" Inserire il nome: ");
+		String nome = t.leggiString();
+		System.out.print(" Inserire il cognome: ");
+		String cognome = t.leggiString();
+		System.out.print(" Inserire la data di nascita: ");
+		GregorianCalendar data = t.leggiGreogrianCalendar();
+		return new Autore(cod, nome, cognome, data);
+	}
+}

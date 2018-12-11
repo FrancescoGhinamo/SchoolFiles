@@ -1,0 +1,29 @@
+package interfaccia;
+
+public class Test implements IOperazioniVettore {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int[] generaNumeriCasuali() {
+		int[] vet = new int[100];
+		for(int i = 0; i < vet.length; i++) {
+			vet[i] = (int) (Math.random() * 1000);
+		}
+		return null;
+	}
+
+	@Override
+	public void somma(int[] vet, int num) {
+		for(int i = 0; i < vet.length; i++) {
+			vet[i] += num;
+		}
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package wrapper.eccezzioni;
+
+public class NaNException extends Exception {
+
+}

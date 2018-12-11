@@ -1,0 +1,8 @@
+package es12;
+
+public class MacchinaAgricola {
+
+	private int numeroOrdine;
+	private String marca;
+	private float costoRiparazione;
+}

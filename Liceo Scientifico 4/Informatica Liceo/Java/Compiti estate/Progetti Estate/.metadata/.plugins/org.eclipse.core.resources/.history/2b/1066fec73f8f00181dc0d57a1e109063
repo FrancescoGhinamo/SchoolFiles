@@ -1,0 +1,12 @@
+package es8;
+
+public class Rombo extends Parallelogramma {
+
+	public Rombo(float diagonaleMaggiore, float diagonaleMinore) {
+		super(diagonaleMaggiore, diagonaleMinore, angoloDiagonaleMagOrizz);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

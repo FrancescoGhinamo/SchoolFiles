@@ -1,0 +1,38 @@
+package libreria.libro;
+
+import java.util.Vector;
+
+public class Libro {
+
+	private String codiceISBN;
+	private String titolo;
+	private String genere;
+	private float prezzo;
+	private Vector<Autore> autori;
+	public Libro(String codiceISBN, String titolo, String genere, float prezzo, Vector<Autore> autori) {
+		super();
+		this.codiceISBN = codiceISBN;
+		this.titolo = titolo;
+		this.genere = genere;
+		this.prezzo = prezzo;
+		this.autori = autori;
+	}
+	public String getCodiceISBN() {
+		return codiceISBN;
+	}
+	public String getTitolo() {
+		return titolo;
+	}
+	public String getGenere() {
+		return genere;
+	}
+	public float getPrezzo() {
+		return prezzo;
+	}
+	public Vector<Autore> getAutori() {
+		return autori;
+	}
+	
+	
+	
+}

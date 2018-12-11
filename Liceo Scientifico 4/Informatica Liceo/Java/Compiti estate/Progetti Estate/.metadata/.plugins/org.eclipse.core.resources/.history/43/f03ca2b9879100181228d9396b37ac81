@@ -1,0 +1,20 @@
+package scuola;
+
+public class Studente {
+	
+	private String nome;
+	private Pagella pagella;
+	
+	public float calcolaMedia() {
+		return pagella.calcolaMedia();
+	}
+	
+	public boolean isSufficiente() {
+		boolean suff = false;
+		if(calcolaMedia() >= 6) {
+			suff = true;
+		}
+		return suff;
+	}
+
+}

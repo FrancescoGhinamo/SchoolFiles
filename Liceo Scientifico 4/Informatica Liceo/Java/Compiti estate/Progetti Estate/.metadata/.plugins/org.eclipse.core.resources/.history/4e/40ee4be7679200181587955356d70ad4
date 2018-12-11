@@ -1,0 +1,5 @@
+package portoNavi;
+
+public class NavePasseggeri extends Nave {
+
+}

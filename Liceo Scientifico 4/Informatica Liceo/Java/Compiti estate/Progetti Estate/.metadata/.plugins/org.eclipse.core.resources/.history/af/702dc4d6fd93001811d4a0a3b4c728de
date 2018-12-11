@@ -1,0 +1,113 @@
+package gui.registrazione;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class GestoreUtenti extends JFrame implements ActionListener {
+	
+	
+	private static final long serialVersionUID = 6153633334580447569L;
+	
+	
+	private JPanel mainPanel;
+	private JPanel panelCognome;
+	private JPanel panelNome;
+	private JPanel panelData;
+	private JPanel panelIndirizzo;
+	private JPanel panelTelefono;
+	private JPanel buttonPanel;
+	
+	private JLabel lblCognome;
+	private JLabel lblNome;
+	private JLabel lblData;
+	private JLabel lblIndirizzo;
+	private JLabel lblTelefono;
+	
+	private JTextArea txtCognome;
+	private JTextArea txtNome;
+	private JTextArea txtData;
+	private JTextArea txtIndirizzo;
+	private JTextArea txtTelefono;
+	
+	private JButton cmdRegistra;
+	private JButton cmdVisualizza;
+	
+	public GestoreUtenti() {
+		mainPanel 		= new JPanel(new FlowLayout());
+		panelCognome 	= new JPanel(new FlowLayout());
+		panelNome 		= new JPanel(new FlowLayout());
+		panelData 		= new JPanel(new FlowLayout());
+		panelIndirizzo 	= new JPanel(new FlowLayout());
+		panelTelefono 	= new JPanel(new FlowLayout());
+		buttonPanel 	= new JPanel(new FlowLayout());
+		
+		lblCognome 		= new JLabel("Cognome");
+		lblNome 		= new JLabel("Nome");
+		lblData 		= new JLabel("Data di nascita");
+		lblIndirizzo 	= new JLabel("Indirizzo");
+		lblTelefono 	= new JLabel("Numero di telefono");
+		
+		txtCognome 		= new JTextArea();
+		txtNome 		= new JTextArea();
+		txtData			= new JTextArea();
+		txtIndirizzo 	= new JTextArea();
+		txtTelefono 	= new JTextArea();
+		
+		cmdRegistra 	= new JButton("Registra utente");
+		cmdVisualizza 	= new JButton("Visualizza utenti");
+		
+		
+		
+		
+		
+		panelCognome.add(lblCognome);
+		panelCognome.add(txtCognome);
+		
+		panelNome.add(lblNome);
+		panelNome.add(txtNome);
+		
+		panelData.add(lblData);
+		panelData.add(txtData);
+		
+		panelIndirizzo.add(lblIndirizzo);
+		panelIndirizzo.add(txtIndirizzo);
+		
+		panelTelefono.add(lblTelefono);
+		panelTelefono.add(txtTelefono);
+		
+		buttonPanel.add(cmdRegistra);
+		buttonPanel.add(cmdVisualizza);
+		
+		mainPanel.add(panelCognome);
+		mainPanel.add(panelNome);
+		mainPanel.add(panelData);
+		mainPanel.add(panelIndirizzo);
+		mainPanel.add(panelTelefono);
+		mainPanel.add(buttonPanel);
+		
+		this.getContentPane().add(mainPanel);
+		this.addWindowListener(new MainWinManager());
+		
+	}
+	
+
+	public static void main(String[] args) {
+		GestoreUtenti gS = new GestoreUtenti();
+		gS.setVisible(true);
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

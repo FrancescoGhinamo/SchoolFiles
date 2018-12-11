@@ -1,0 +1,5 @@
+package wrapper.eccezzioni;
+
+public class NumeroNegativoException extends Exception {
+
+}

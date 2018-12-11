@@ -1,0 +1,49 @@
+package es9;
+
+public class InsiemieDiStringhe {
+	
+	private String[] stringhe;
+	
+	
+
+	public InsiemieDiStringhe(String[] stringhe) {
+		super();
+		this.stringhe = stringhe;
+	}
+
+	public String stringaLunga() {
+		String ris = "";
+		for(int c = 0; c < stringhe.length; c++) {
+			if(ris.length() < stringhe[c].length()) {
+				ris = stringhe[c];
+			}
+		}
+		return ris;
+	}
+	
+	public int contaSpazi(String stringa) {
+		int conta = 0;
+		for(int i = 0; i < stringa.length(); i++) {
+			if(stringa.charAt(i) == ' ') {
+				conta ++;
+			}
+		}
+		return conta;
+	}
+	
+	public String spaziStringa() {
+		String ris = "";
+		for(int c = 0; c < stringhe.length; c++) {
+			if(contaSpazi(ris) < contaSpazi(stringhe[c])) {
+				ris = stringhe[c];
+			}
+		}
+		return ris;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

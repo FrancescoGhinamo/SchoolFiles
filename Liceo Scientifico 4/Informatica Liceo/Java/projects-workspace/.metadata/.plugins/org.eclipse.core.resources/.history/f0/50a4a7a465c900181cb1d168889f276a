@@ -1,0 +1,22 @@
+package gestioneMagazzino.dati;
+
+import java.util.ArrayList;
+
+public class ElencoArticoli extends ArrayList<Articolo> {
+	
+	public void aggiungiArticolo(Articolo a) {
+		if(a == null) {
+			throw new IllegalArgumentException("Articolo non specificato");
+		}
+		add(a);
+	}
+	
+	public String toString() {
+		String ris = "";
+		for(Articolo ar: this) {
+			ris  += "\n" + ar.toString();
+		}
+		return ris;
+	}
+
+}

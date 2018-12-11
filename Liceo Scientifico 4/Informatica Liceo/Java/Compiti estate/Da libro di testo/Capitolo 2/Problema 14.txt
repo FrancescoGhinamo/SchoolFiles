@@ -1,0 +1,13 @@
+Dati in input: verifiche sostenute Verfica(voto) array verifiche
+Dati in output: numero di verifiche sufficienti
+
+Pseudocodifica:
+inizio
+	definisci nrSuff
+	per ogni verifica di verfiche
+		se verifica.voto >= 6 allora
+			incrementa nrSuff di uno
+		fine se
+	fine per ogni
+	restituisci nrSuff
+fine

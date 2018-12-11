@@ -1,0 +1,12 @@
+Dati in input: coordinate di due punti (x1, y1, x2, y2)
+Dati in output: equazione della retta passante per i due punti
+
+Pseudocodifica
+inizio
+	se x1 = x2 allora
+		restituisci equazione x = x1
+	altrimenti
+		equazione = (x - x1) / (x2 - x1) = (y - y2) / (y2 - y1)
+		restituisci equazione
+	fine se
+fine

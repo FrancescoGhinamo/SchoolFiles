@@ -1,0 +1,8 @@
+Funzione sonoParallele(Retta r1, Retta r2)
+inizio
+	se (r1.a / r1.b) = (r2.a / r2.b) allora
+		restituisci vero
+	altrimnti
+		restituisci falso
+	fine se
+fine

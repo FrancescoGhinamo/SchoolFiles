@@ -1,0 +1,8 @@
+package es10;
+
+public class Posto {
+
+	private Veicolo veicolo;
+	private int numero;
+	
+}

@@ -1,0 +1,21 @@
+package bicicletta;
+
+public class Ruota extends Componente {
+	
+	private float diametroIn;
+	private boolean raggi;
+	public Ruota(String marca, float prezzo, float diametroIn, boolean raggi) {
+		super(marca, prezzo);
+		this.diametroIn = diametroIn;
+		this.raggi = raggi;
+	}
+	public float getDiametroIn() {
+		return diametroIn;
+	}
+	public boolean isRaggi() {
+		return raggi;
+	}
+	
+	
+
+}

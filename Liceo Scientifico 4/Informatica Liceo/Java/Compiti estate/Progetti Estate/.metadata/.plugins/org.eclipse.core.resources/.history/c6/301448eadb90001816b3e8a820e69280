@@ -1,0 +1,18 @@
+package bicicletta;
+
+public class Pedali {
+	
+	private float distanzaCentroCm;
+
+	public Pedali(float distanzaCentroCm) {
+		super();
+		this.distanzaCentroCm = distanzaCentroCm;
+	}
+
+	public float getDistanzaCentroCm() {
+		return distanzaCentroCm;
+	}
+	
+	
+	
+}

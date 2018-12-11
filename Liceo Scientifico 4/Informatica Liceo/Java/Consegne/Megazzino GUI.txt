@@ -1,0 +1,7 @@
+Magazzino da caricare articoli
+Articolo: 
+ - codice
+ - descrizione
+ - prezzo
+
+per GUI provare GridLayout per inserire bottoni per registrare prodotto

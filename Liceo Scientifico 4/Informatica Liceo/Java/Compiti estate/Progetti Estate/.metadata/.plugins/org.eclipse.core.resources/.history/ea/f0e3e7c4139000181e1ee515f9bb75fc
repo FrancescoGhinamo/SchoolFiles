@@ -1,0 +1,16 @@
+package libreria.output;
+
+public class EsportatorePDF {
+	
+	public static final String FILE = "H:\\File Liceo\\Backup\\Liceo Scientifico 4\\Informatica Liceo\\Java\\Compiti estate\\Progetti Estate\\Gestone Libreria\\BunoSconto.pdf";
+	
+	private Object obj;
+
+	public EsportatorePDF(Object obj) {
+		super();
+		this.obj = obj;
+	}
+	
+	
+
+}

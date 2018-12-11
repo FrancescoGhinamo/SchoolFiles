@@ -1,0 +1,4 @@
+Test.java:6: error: incompatible types: possible lossy conversion from int to byte
+                lunghezza = 140;
+                            ^
+1 error

@@ -1,0 +1,16 @@
+Dati in input: sequenza di numeri (listaNum)
+Dati in output: elenco contenente conteggio numeri positivi, numeri negativi e percentuale dei positivi
+
+Pseudocodifica
+inizio
+	definisci array conteggi
+	per ogni elemento elem di listaNum
+		se elem >= 0 allora
+			conteggi[0]++
+		altrimenti
+			conteggi[1]++
+		fine se
+	fine per ogni
+	conteggi[2] = (conteggi[0] / lungezza di listaNum) * 100
+	restituisci conteggi
+fine

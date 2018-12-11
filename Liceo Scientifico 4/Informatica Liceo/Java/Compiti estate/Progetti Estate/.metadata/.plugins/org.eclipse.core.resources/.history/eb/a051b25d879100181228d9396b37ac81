@@ -1,0 +1,12 @@
+package scuola;
+
+public class Studente {
+	
+	private String nome;
+	private Pagella pagella;
+	
+	public float calcolaMedia() {
+		return pagella.calcolaMedia();
+	}
+
+}

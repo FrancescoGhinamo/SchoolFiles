@@ -1,0 +1,13 @@
+Per ottenere la soluzione con pH 3 si è proceduto con una diluizione di quella ottenuta inizialmente, avente pH = 1. Innanzitutto, il pH è una funzione logaritmica della concentrazioni di ioni H+ presenti in una soluzione. pH = -log([H+]). Dunque, se si vuole ottenere una soluzione con pH pari a tre, sarà necessario arrivare ad avere una soluzione in cui la concentrazione di H+ sia 1 * 10 ^ -3 M. Essendo la dissociazioni di HCl -> H+ + Cl-, la concentrazione di H+ equivale a quella di HCl dunque nel nostro caso è bastato diluire la soluzione 1 M HCl fino a renderla 10 ^ -3 M.
+Per ottenere 100 mL di soluzione pH = 3, è sufficiente prelevare un millesimo della soluzione 1M e riportare il volume a 100 mL, per dividere per 1000 la concentrazione della soluzione. Per questo motivo, con l'uso di una propipetta sono stati prelevati 0.1 mL di soluzione e versati insieme all'acqua in un nuovo matraccio. La nuova soluzione ha pH pari a 3.
+
+- SOLUZIONE DI pH 5
+
+Procedendo in modo analogo, si è ricavato che la concentrazione di HCl per ottenere una soluzione acquosa di pH 5, deve essere di 1 * 10 ^ -5 M. Per ottenere questa molarità è necessario dividere per 100 la concentrazione della soluzione pH = 3. A questo fine, dalla soluzione pH = 3 è stato prelevato 1 mL di soluzione e infine aggiunto in un matraccio ad una quantità di acqua per raggiungere volume 100 mL.
+
+> Verifica della correttezza dei risultati
+
+I valori di pH delle soluzioni sono stati controllati con tre diversi metodi: indicatore al cavolo rosso, cartine di tornasole, e pH-metro.
+
+-INDICATORE AL CAVOLO ROSSO:
+Per preparare un indicatore al cavolo rosso è necessario far bollire

@@ -1,0 +1,20 @@
+package es10;
+
+import java.util.Vector;
+
+public class Garage {
+
+	private Vector<Posto> posti;
+	
+	public Garage() {
+		posti = new Vector<Posto>();
+	}
+	
+	public String toString() {
+		String ris = "\n\t GARAGE";
+		for(int c = 0; c < posti.size(); c++) {
+			ris += "\n"+posti.elementAt(c).toString();
+		}
+		return ris;
+	}
+}

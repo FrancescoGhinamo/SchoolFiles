@@ -1,0 +1,4 @@
+Test.java:5: error: incompatible types: possible lossy conversion from double to int
+                int volume = 15.0;
+                             ^
+1 error

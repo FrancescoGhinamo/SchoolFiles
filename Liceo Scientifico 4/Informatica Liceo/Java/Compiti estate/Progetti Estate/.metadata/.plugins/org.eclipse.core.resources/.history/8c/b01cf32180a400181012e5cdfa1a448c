@@ -1,0 +1,38 @@
+package libreria.gestione;
+
+import libreria.dati.Cliente;
+import libreria.dati.Libro;
+
+public class Libreria {
+
+	public static final int MAX_LIBRI = 1000;
+	public static final int MAX_CLIENTI = 1000;
+	
+	private Libro[] libri;
+	private Cliente[] clienti;
+	
+	public Libreria() {
+		libri = new Libro[MAX_LIBRI];
+		clienti = new Cliente[MAX_CLIENTI];
+	}
+	
+	public Libro creaLibro() {
+		
+	}
+	
+	public static int getMaxLibri() {
+		return MAX_LIBRI;
+	}
+	public static int getMaxClienti() {
+		return MAX_CLIENTI;
+	}
+	public Libro[] getLibri() {
+		return libri;
+	}
+	public Cliente[] getClienti() {
+		return clienti;
+	}
+	
+	
+	
+}

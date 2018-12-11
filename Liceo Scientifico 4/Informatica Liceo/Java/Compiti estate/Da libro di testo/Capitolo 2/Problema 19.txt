@@ -1,0 +1,26 @@
+7. JavaScript
+
+JavaScript è uno dei linguaggi di programmazione più diffusi al giorno d’oggi. Inizialmente venne progettato per il web, ma è diventato le fondamenta degli ambienti server come Node.js, e per decine di framework per applicazioni mobili, ma anche per software desktop. JavaScript è apparso per la prima volta in Netscape Navigator, nel 1995, ponendo le basi per le pagine web dinamiche del moderno web.
+
+6. PHP
+
+PHP è attualmente utilizzato dall’82,5% di tutti i siti web. La sua ubiquità e la distribuzione attraverso provider di hosting, oltre al la perfetta integrazione con il MySQL RDBMS e applicazioni di avvio hanno portato ad una massiccia domanda di sviluppatori web PHP in tutto il mondo. PHP era il terzo linguaggio più popolare a Marzo 2010.
+
+5. Python
+
+Python è un linguaggio di programmazione che vanta innumerevoli applicazioni in vari scenari. Si tratta di un linguaggio di scripting incorporato e versatile, ma anche della base solida di molti framework web per le operazioni automatizzate (quelle in 3D comprese), per la programmazione di strumenti desktop e per l’esecuzione di attività scientifiche di dati e di calcolo. La flessibilità di Python consente di creare applicazioni per i vari sistemi operativi, tra cui Android.
+
+4. C#
+
+C# è il linguaggio di programmazione principale definito da Microsoft come l’alfiere per le applicazioni .NET. Viene ampiamente utilizzato come strumento principale per gli strumenti di Microsoft, le applicazioni desktop e i componenti del sistema operativo Windows. Microsoft nel 2014 l’ha reso open source, mossa che è stata accolta con favore dalla comunità che ora lo sta adottando per scopi diversi.
+3. C++
+
+C ++ ha oscillato tra il terzo e il quinto posto dei linguaggi di programmazione più popolari per oltre un decennio. Rappresenta la base di diversi linguaggi di programmazione, ma anche la scelta di programmazione principale per molte delle applicazioni desktop più utilizzate; una scelta per i driver delle periferiche, per i motori dei giochi, per gli strumenti audio e di elaborazione delle immagini e molto altro ancora. Windows è in gran parte scritto in C ++, e anche il KDE per Linux è programmato in C ++.
+
+2. C
+
+Il linguaggio di programmazione C è stato classificato come il linguaggio più popolare al mondo a Marzo 2015. Le applicazioni e l’affidabilità di C sono quasi infinite, ed è da sempre stato un linguaggio tra i più popolari. C è il predecessore di C ++ ed è una versione semplificata e meno funzionale. Questo permette di poterlo far funzionare su di un ampio insieme di dispositivi hardware e in scenari con prestazioni critiche quando si opera con volumi di traffico di dati, o di audio e video non indifferenti. Il kernel di Linux è scritto in C, che viene utilizzato per i kernel dei maggiori sistemi operativi.
+
+1. Java
+
+Java è stato il rivale principale di C in termini di popolarità. Ha vinto il premio come “linguaggio di programmazione del 2015” e, secondo Oracle, è utilizzato attivamente da 9 milioni di sviluppatori. La popolarità di Java è dovuta ad una combinazione di diversi tasti, ed inoltre è il linguaggio di programmazione che sta dietro al sistema operativo mobile Android, oltre ad essere un potente linguaggio per i siti web come LinkedIn. Attualmente è di proprietà di Oracle e viene utilizzato per tutti i tipi di applicazioni.

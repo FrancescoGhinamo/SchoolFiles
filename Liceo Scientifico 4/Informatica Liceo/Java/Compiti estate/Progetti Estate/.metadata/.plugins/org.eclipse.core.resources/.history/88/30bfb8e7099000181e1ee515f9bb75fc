@@ -1,0 +1,39 @@
+package es12;
+
+public class Aggiusteria {
+	
+	public static final int MAX_POSTI = 10;
+	
+	private PostoRiparazione[] posti;
+	private int numeroOrdine = 0;
+	
+	public Aggiusteria() {
+		this.posti = new PostoRiparazione[MAX_POSTI];
+		for(int i = 0; i < posti.length; i++) {
+			posti[i] = null;
+		}
+	}
+	
+	public int primoIndiceLibero() {
+		int i = 0;
+		for(i = 0; i < (posti.length) && (posti[i] != null); i++) {
+			
+		}
+		return i;
+	}
+	
+	public MacchinaAgricola creaMacchina() {
+		Tastiera t = new Tastiera();
+		MacchinaAgricola m = null;
+		System.out.println("\nREGISTRAZIONE DI UNA MACCHINA AGRICOLA");
+		System.out.print(" Inserire la marca: ");
+		String marca = t.leggiString();
+		return m;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

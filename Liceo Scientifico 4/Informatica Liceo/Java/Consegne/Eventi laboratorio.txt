@@ -1,0 +1,17 @@
+programma per gestire il registro del laboratorio:
+
+- data
+- ora entrata
+- ora uscita
+- classe / progetto
+- noem docente
+- check riscontrate anomalie
+	- mettendo spunta abilita campo di testo per descrivere l'anomalia
+
+Frame rincipale
+ - JTable con i riscontri con tutte le presenza
+
+Menu
+ - item: aggiungi presenza apre finestra di dialogo per dettagliare la riga, l'aggiunta deve essere per ordine di data
+ - item: modifica presenza:
+	selezione riga della JTable e mi riapre la stessa finestra di dialogo, modifico i campi e aggiorno la JTable

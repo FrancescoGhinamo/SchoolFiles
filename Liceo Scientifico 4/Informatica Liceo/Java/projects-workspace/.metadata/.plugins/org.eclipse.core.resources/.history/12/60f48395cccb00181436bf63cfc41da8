@@ -1,0 +1,71 @@
+package animali;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
+
+/**
+ * classe realizzata per rappresentare un animale generico
+ * @author Francesco
+ *
+ */
+public class Animale {
+
+	private String nome;
+	private String matricola;
+	private GregorianCalendar dataNascita;
+	private GregorianCalendar dataArrivo;
+	private float pesoKg;
+
+	public void stampaCaratteristiche() {
+
+	}
+
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getMatricola() {
+		return matricola;
+	}
+	public void setMatricola(String matricola) {
+		this.matricola = matricola;
+	}
+	
+	public GregorianCalendar getDataNascita() {
+		return dataNascita;
+	}
+
+	public void setDataNascita(GregorianCalendar dataNascita) {
+		this.dataNascita = dataNascita;
+	}
+
+	public GregorianCalendar getDataArrivo() {
+		return dataArrivo;
+	}
+
+	public void setDataArrivo(GregorianCalendar dataArrivo) {
+		this.dataArrivo = dataArrivo;
+	}
+
+	public float getPesoKg() {
+		return pesoKg;
+	}
+	public void setPesoKg(float pesoKg) {
+		this.pesoKg = pesoKg;
+	}
+	
+	public String toString() {
+		SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
+		String ris = "";
+		ris += "\n\t\t Nome: "+nome;
+		ris += "\n\t\t Matricola: "+matricola;
+		ris += "\n\t\t Data di nasctita: "+fmt.format(dataNascita);
+		ris += "\n\t\t Data di arrivo: "+fmt.format(dataArrivo);
+		ris += "\n\t\t Peso: "+pesoKg+" kg";
+		return ris;
+	}
+
+}

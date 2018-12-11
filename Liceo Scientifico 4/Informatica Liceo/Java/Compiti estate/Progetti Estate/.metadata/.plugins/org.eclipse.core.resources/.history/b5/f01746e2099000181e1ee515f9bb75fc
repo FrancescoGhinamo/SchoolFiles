@@ -1,0 +1,29 @@
+package es12;
+
+public class Aggiusteria {
+	
+	public static final int MAX_POSTI = 10;
+	
+	private PostoRiparazione[] posti;
+	
+	public Aggiusteria() {
+		this.posti = new PostoRiparazione[MAX_POSTI];
+		for(int i = 0; i < posti.length; i++) {
+			posti[i] = null;
+		}
+	}
+	
+	public int primoIndiceLibero() {
+		int i = 0;
+		for(i = 0; i < (posti.length) && (posti[i] != null); i++) {
+			
+		}
+		return i;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

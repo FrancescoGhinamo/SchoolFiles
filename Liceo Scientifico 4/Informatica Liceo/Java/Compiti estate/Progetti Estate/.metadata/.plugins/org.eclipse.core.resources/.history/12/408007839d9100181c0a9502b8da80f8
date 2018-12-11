@@ -1,0 +1,31 @@
+package tassonomia;
+
+import tassonomia.input.Tastiera;
+
+public class RicercaInformazioni {
+
+	public static void main(String[] args) {
+		Tastiera t = new Tastiera();
+		int scelta = 0;
+		do {
+			System.out.println("\n\tTASSONOMIA VEGETALE");
+			System.out.println(" 1 - Alberi forestali");
+			System.out.println(" 2 - Alghe");
+			System.out.println(" 3 - Composte");
+			System.out.println(" 4 - Crucifere");
+			System.out.println(" 5 - Felci");
+			System.out.println(" 6 - Graminacee");
+			System.out.println(" 7 - Leguminose");
+			System.out.println(" 8 - Liliacee");
+			System.out.println(" 9 - Muschi");
+			System.out.println("10 - Ombrellifere");
+			System.out.println("11 - Rosacee");
+			System.out.println("12 - Solanacee");
+			System.out.println(" 0 - =======> Uscita");
+			
+		}
+		while(scelta != 0);
+
+	}
+
+}

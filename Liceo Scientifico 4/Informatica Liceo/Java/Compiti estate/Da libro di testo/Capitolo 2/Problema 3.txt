@@ -1,0 +1,6 @@
+divisione(num1, num2)
+se num2 != 0 allora
+	restituisci num1 / num2
+altrimenti
+	restituisci messaggio di errore
+fine se

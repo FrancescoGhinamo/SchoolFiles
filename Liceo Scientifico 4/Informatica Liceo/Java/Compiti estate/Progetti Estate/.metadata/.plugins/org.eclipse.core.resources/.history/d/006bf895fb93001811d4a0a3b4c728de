@@ -1,0 +1,46 @@
+package gui.registrazione;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class GestoreUtenti extends JFrame implements ActionListener {
+	
+	private JPanel mainPanel;
+	private JPanel panelCognome;
+	private JPanel panelNome;
+	private JPanel panelData;
+	private JPanel panelIndirizzo;
+	private JPanel panelTelefono;
+	private JPanel buttonPanel;
+	
+	private JLabel lblCognome;
+	private JLabel lblNome;
+	private JLabel lblData;
+	private JLabel lblIndirizzo;
+	private JLabel lblTelefono;
+	
+	private JButton cmdRegistra;
+	private JButton cmdVisualizza;
+	
+	public GestoreUtenti() {
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,153 @@
+package libreria.interazione;
+
+import java.io.FileNotFoundException;
+import java.util.GregorianCalendar;
+import java.util.Vector;
+
+import com.itextpdf.text.DocumentException;
+
+import libreria.input.Tastiera;
+import libreria.libro.Autore;
+import libreria.libro.Libro;
+import libreria.output.EsportatorePDF;
+
+public class Libreria {
+
+	private Vector<Libro> libri;
+	private Vector<Cliente> clientiRegistrati;
+	private float ricavo;
+	
+	public Libreria() {
+		this.libri = new Vector<Libro>();
+		this.clientiRegistrati = new Vector<Cliente>();
+		ricavo = 0;
+	}
+	
+	public Autore creaAutore() {
+		Tastiera t = new Tastiera();
+		System.out.println(" Registrazione di un autore");
+		System.out.print(" Inserire il codice: ");
+		String cod = t.leggiString();
+		System.out.print(" Inserire il nome: ");
+		String nome = t.leggiString();
+		System.out.print(" Inserire il cognome: ");
+		String cognome = t.leggiString();
+		System.out.print(" Inserire la data di nascita: ");
+		GregorianCalendar data = t.leggiGreogrianCalendar();
+		return new Autore(cod, nome, cognome, data);
+	}
+	
+	public Cliente creaCliente() {
+		Tastiera t = new Tastiera();
+		System.out.println(" Inserimento di un cliente");
+		System.out.print(" Inserire il nome: ");
+		String nome = t.leggiString();
+		System.out.print(" Inserire il cognome: ");
+		String cognome = t.leggiString();
+		System.out.print(" Inserire il codice fiscale: ");
+		String codiceF = t.leggiString();
+		System.out.print(" Inserire la data di nascita: ");
+		GregorianCalendar data = t.leggiGreogrianCalendar();
+		return new Cliente(nome, cognome, codiceF, data);
+	}
+	
+	public Vector<Autore> registraAutori() {
+		Tastiera t = new Tastiera();
+		Vector<Autore> _autori = new Vector<Autore>();
+		boolean continua = false;
+		do {
+			_autori.add(creaAutore());
+			System.out.print("\n Aggiungere un altro autore? ");
+			continua = t.leggiBoolean();
+		}
+		while(continua);
+		return _autori;
+	}
+	
+	public Libro creaLibro() {
+		Tastiera t = new Tastiera();
+		System.out.println("\n\tINSERIMENTO DI UN LIBRO");
+		System.out.print(" Inserire il codice ISBN: ");
+		String isbn = t.leggiString();
+		System.out.print(" Inserire il titolo: ");
+		String titolo = t.leggiString();
+		System.out.print(" Inserire il genere: ");
+		String genere = t.leggiString();
+		System.out.print(" Inserire il prezzo: ");
+		float prezzo = t.leggiFloat();
+		System.out.println(" Registrare gli autori:\n");
+		return new Libro(isbn, titolo, genere, prezzo, registraAutori());
+	}
+	
+	public void aggiungiLibro(Libro l) {
+		libri.add(l);
+	}
+	
+	public void aggiungiCliente(Cliente c) {
+		clientiRegistrati.add(c);
+		EsportatorePDF exp = new EsportatorePDF(c);
+		try {
+			exp.esportaPDF();
+		} catch (FileNotFoundException | DocumentException e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void stampaSituazioneLibreria() {
+		System.out.println(this.toString());
+		EsportatorePDF exp = new EsportatorePDF(this);
+		try {
+			exp.esportaPDF();
+		} catch (FileNotFoundException | DocumentException e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void vendiLibro(Libro l, Cliente c) {
+		int index = Integer.MAX_VALUE;
+		for(int i = 0; i < libri.size(); i++) {
+			if(libri.elementAt(i).equals(l)) {
+				index = i;
+				break;
+			}
+		}
+		int sconto = 0;
+		for(int i = 0; i < libri.size(); i++) {
+			if(clientiRegistrati.elementAt(i).equals(c)) {
+				sconto = 3;
+				break;
+			}
+		}
+		if(index != Integer.MAX_VALUE) {
+			ricavo += libri.elementAt(index).getPrezzo() - sconto;
+			libri.removeElementAt(index);
+		}
+		else {
+			System.out.println(" Libro non presente nel record");
+		}
+	}
+	
+	
+	public float getRicavo() {
+		return ricavo;
+	}
+
+	public String toString() {
+		String ris = "";
+		ris += "\n\tELENCO LIBRI";
+		for(int i = 0; i < libri.size(); i++) {
+			ris += libri.elementAt(i).toString();
+		}
+		return ris;
+	}
+	
+	public static void main(String[] args) {
+		Tastiera t = new Tastiera();
+		Libreria lib = new Libreria();
+		int scelta = 0;
+		do {
+			
+		}
+		while(scelta != 0);
+	}
+}

@@ -1,0 +1,32 @@
+package bicicletta;
+
+public class Cambio extends Componente {
+
+	private Corona[] corone;
+	private int nrRapporti;
+	
+	public Cambio(String marca, float prezzo, Corona[] corone, int nrRapporti) {
+		super(marca, prezzo);
+		this.corone = corone;
+		this.nrRapporti = nrRapporti;
+	}
+	
+	public void aumenta() {
+		
+	}
+	
+	public void diminuisci() {
+		
+	}
+
+	public Corona[] getCorone() {
+		return corone;
+	}
+
+	public int getNrRapporti() {
+		return nrRapporti;
+	}
+	
+	
+
+}

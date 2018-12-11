@@ -1,0 +1,12 @@
+Dati in input: dati relativi ad un elenco di libri: Libro(autore, titolo, prezzo), array libri
+Dati in output: prezzo totale
+
+Pseudocodifica
+inizio
+	definisci tot
+	per ogni elemento libro dell'array libri
+		incerementa tot di libro.prezzo
+	fine per ogni
+	tot = tot + (4 * tot) / 100
+	restituisci tot
+fine

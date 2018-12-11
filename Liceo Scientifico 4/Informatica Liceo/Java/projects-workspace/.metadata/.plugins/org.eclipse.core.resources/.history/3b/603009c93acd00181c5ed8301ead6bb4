@@ -1,0 +1,9 @@
+package voti;
+
+import java.util.ArrayList;
+
+public class ElencoVoti extends ArrayList<Voto> {
+
+	private static final long serialVersionUID = 1L;
+
+}

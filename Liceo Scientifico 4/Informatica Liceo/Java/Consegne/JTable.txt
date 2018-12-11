@@ -1,0 +1,3 @@
+Prendere programma fatto con JList,
+usare JTable
+Quando aggiungi riga, devo fornire un array di stringe, una stringa per colonna della tabella

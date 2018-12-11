@@ -1,0 +1,16 @@
+cerchio:
+	raggio
+	calcolaCirconferenza
+	calcolaArea
+	calcolaDiametro
+	calcolaLughezzaArco
+	
+poligono:
+	numero lati
+	isEquilatero
+	calcolaPerimetri
+	calcolaArea
+	trovaBaricentro
+	trovaIncentro
+	trovaCircocentro
+	trovaOrtocentro

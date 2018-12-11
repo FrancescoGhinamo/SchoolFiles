@@ -1,0 +1,23 @@
+package es12;
+
+public class PostoRiparazione {
+
+	private MacchinaAgricola macchina;
+	private String descrizioneRiparazione;
+	private float costoLavorazioni;
+	
+	
+	
+	public MacchinaAgricola getMacchina() {
+		return macchina;
+	}
+	public String getDescrizioneRiparazione() {
+		return descrizioneRiparazione;
+	}
+	public float getCostoLavorazioni() {
+		return costoLavorazioni;
+	}
+	
+	
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Tastiera.java&apos; to &apos;Libro di ricette/src/ricettario.input&apos;&#x0D;&#x0A;- Original project: &apos;Gestone Libreria&apos;&#x0D;&#x0A;- Destination element: &apos;Libro di ricette/src/ricettario.input&apos;&#x0D;&#x0A;- Original element: &apos;libreria.input.Tastiera.java&apos;" description="Copy compilation unit" destination="=Libro di ricette/src&lt;ricettario.input" element1="/src&lt;libreria.input{Tastiera.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1532683543217" units="1" version="1.0"/>
+</session>

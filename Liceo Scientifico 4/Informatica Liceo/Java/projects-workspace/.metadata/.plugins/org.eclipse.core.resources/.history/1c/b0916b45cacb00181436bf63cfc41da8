@@ -1,0 +1,457 @@
+package gestione;
+
+import java.sql.Date;
+
+import animali.Animale;
+import zoo.Gabbia;
+import animali.Gorilla;
+import animali.Pinguino;
+import animali.Tigre;
+import animali.TipoPelo;
+import gestione.input.Menu;
+import gestione.input.Tastiera;
+/**
+ * classe principale per la gestione dello zoo completo do gabbie e animali
+ * @author Francesco
+ *
+ */
+public class GestioneZoo {
+//	//numero massimo di gabbie dello zoo
+//	static final int NUMGABBIE = 3;
+//	//numero massimo di animali per gabbia
+//	static final int MAXAN = 5;
+//	//valore nullo per la ricerca di un animale per nome
+//	static final int NULLVAL = 9999;
+//	//insieme di gabbie dello zoo
+//	private Gabbia[] gabbie;
+//
+//	/**
+//	 * crea un oggetto di tipo tigre
+//	 * @return
+//	 */
+//
+//	private Tigre creaTigre() {
+//		Tastiera t = new Tastiera();
+//
+//		//menu per la scelta del tipo di pelo
+//		String[] voci = new String[3];
+//		voci[0] = "Raso";
+//		voci[1] = "Lungo";
+//		voci[2] = "Corto";
+//		int scelta = 0;
+//		Menu tipoPelo = new Menu(voci);
+//		//variabili per memorizzazione temporanea delle caratteristiche dell'animale
+//		String nome = "";
+//		String matricola = "";
+//		Date nascita = null;
+//		Date arrivo = null;
+//		float peso = 0;
+//		TipoPelo pelo = null;
+//
+//		System.out.println("\n\tINSERIMENTO DI UNA TIGRE");
+//		System.out.print("Inserire il nome: ");
+//		nome = t.leggiString();
+//		System.out.print("Inserire la matricola: ");
+//		matricola = t.leggiString();
+//		System.out.print("Inserire la data di nascita (standard JDBC yyyy-[m]m-[d]d): ");
+//		nascita = t.leggiData();
+//		System.out.print("Inserire la date di arrivo allo zoo (standard JDBC yyyy-[m]m-[d]d): ");
+//		arrivo = t.leggiData();
+//		System.out.print("Inserire il peso in kg: ");
+//		peso = t.leggiFloat();
+//		System.out.println("Inserire il tipo del pelo:");
+//		scelta = tipoPelo.sceltaMenu();
+//		switch(scelta) {
+//		case 1:
+//			pelo = TipoPelo.RASO;
+//			break;
+//
+//		case 2:
+//			pelo = TipoPelo.LUNGO;
+//			break;
+//
+//		case 3:
+//			pelo = TipoPelo.CORTO;
+//			break;
+//
+//		default: pelo = TipoPelo.CORTO;
+//		}
+//
+//		return new Tigre(nome, matricola, nascita, arrivo, peso, pelo);
+//	}
+//
+//	/**
+//	 * crea un oggetti di tipo Gorilla
+//	 */
+//	private Gorilla creaGorilla() {
+//		Tastiera t = new Tastiera();
+//
+//		//menu per la scelta del tipo di pelo
+//		String[] voci = new String[3];
+//		voci[0] = "Raso";
+//		voci[1] = "Lungo";
+//		voci[2] = "Corto";
+//		int scelta = 0;
+//		Menu tipoPelo = new Menu(voci);
+//		//variabili per memorizzazione temporanea delle caratteristiche dell'animale
+//		String nome = "";
+//		String matricola = "";
+//		Date nascita = null;
+//		Date arrivo = null;
+//		float peso = 0;
+//		TipoPelo pelo = null;
+//
+//		System.out.println("\n\tINSERIMENTO DI UN GORILLA");
+//		System.out.print("Inserire il nome: ");
+//		nome = t.leggiString();
+//		System.out.print("Inserire la matricola: ");
+//		matricola = t.leggiString();
+//		System.out.print("Inserire la data di nascita (standard JDBC yyyy-[m]m-[d]d): ");
+//		nascita = t.leggiData();
+//		System.out.print("Inserire la date di arrivo allo zoo (standard JDBC yyyy-[m]m-[d]d): ");
+//		arrivo = t.leggiData();
+//		System.out.print("Inserire il peso in kg: ");
+//		peso = t.leggiFloat();
+//		System.out.println("Inserire il tipo del pelo:");
+//		scelta = tipoPelo.sceltaMenu();
+//		switch(scelta) {
+//		case 1:
+//			pelo = TipoPelo.RASO;
+//			break;
+//
+//		case 2:
+//			pelo = TipoPelo.LUNGO;
+//			break;
+//
+//		case 3:
+//			pelo = TipoPelo.CORTO;
+//			break;
+//
+//		default: pelo = TipoPelo.CORTO;
+//		}
+//
+//		return new Gorilla(nome, matricola, nascita, arrivo, peso, pelo);
+//	}
+//	/**
+//	 * crea un oggetto di tipo pinguino
+//	 * @return
+//	 */
+//	private Pinguino creaPinguino() {
+//		Tastiera t = new Tastiera();
+//
+//		//variabili per memorizzazione temporanea delle caratteristiche dell'animale
+//		String nome = "";
+//		String matricola = "";
+//		Date nascita = null;
+//		Date arrivo = null;
+//		float peso = 0;
+//
+//		System.out.println("\n\tINSERIMENTO DI UN PINGUINO");
+//		System.out.print("Inserire il nome: ");
+//		nome = t.leggiString();
+//		System.out.print("Inserire la matricola: ");
+//		matricola = t.leggiString();
+//		System.out.print("Inserire la data di nascita (standard JDBC yyyy-[m]m-[d]d): ");
+//		nascita = t.leggiData();
+//		System.out.print("Inserire la date di arrivo allo zoo (standard JDBC yyyy-[m]m-[d]d): ");
+//		arrivo = t.leggiData();
+//		System.out.print("Inserire il peso in kg: ");
+//		peso = t.leggiFloat();
+//
+//
+//		return new Pinguino(nome, matricola, nascita, arrivo, peso);
+//	}
+//	/**
+//	 * crea un vettore contenente una serie di animali della stessa specie
+//	 * @return
+//	 */
+//	private Animale[] creaGruppoAnimali() {
+//		Tastiera t = new Tastiera();
+//		//inizializzazione del menu per la scelta di una animale
+//		String[] vociMenu = new String[3];
+//		vociMenu[0] = "Tigre";
+//		vociMenu[1] = "Gorilla";
+//		vociMenu[2] = "Pinguino";
+//		Menu menu = new Menu(vociMenu);
+//		//scelta del menu
+//		int scelta = 0;
+//		//numero di animali da creare
+//		int num = 0;
+//		//creazione di un array di animali e inizializzazione a null
+//		Animale[] gruppo = new Animale[MAXAN];
+//		for(int i = 0; i < MAXAN; i++) {
+//			gruppo[i] = null;
+//		}
+//		//richiesta numero di animali da inserire
+//		System.out.print("\nInserire il numero di animali da registrare: ");
+//		do {
+//			num = t.leggiInt();
+//		}
+//		while(num > MAXAN);
+//		//scelta della specie animale e generazione del gruppo di animali
+//		scelta = menu.sceltaMenu();
+//		switch(scelta) {
+//		case 1:
+//			for(int c = 0; c < num; c++) {
+//				gruppo[c] = creaTigre();
+//			}
+//			break;
+//
+//		case 2:
+//			for(int c = 0; c < num; c++) {
+//				gruppo[c] = creaGorilla();
+//			}
+//			break;
+//
+//		case 3:
+//			for(int c = 0; c < num; c++) {
+//				gruppo[c] = creaPinguino();
+//			}
+//			break;
+//
+//		default: System.out.println("\nAnimale non riconosciuto");
+//		}
+//
+//		return gruppo;
+//	}
+//	/**
+//	 * inizializza una gabbia con un gruppo di animli
+//	 * @param gabbia: array di gabbie
+//	 * @param gruppoAnimale: gruppo di animali da inserire in una gabbia
+//	 */
+//	public void aggiungiGabbia(Gabbia[] gabbia) {
+//		Tastiera t = new Tastiera();
+//		String codice;
+//		int i;
+//		//inserimento del codice di una gabbia
+//		System.out.print("Inserire il codice della gabbia: ");
+//		codice = t.leggiString();
+//		//ricerca della prima gabbia disponibile
+//		for(i = 0; i < NUMGABBIE && (gabbia[i] != null); i++) {
+//
+//		}
+//
+//		//		System.out.println("\n\t\t"+i);									//per il debug
+//		if((i == NUMGABBIE - 1) && (gabbia[i] != null)) {
+//			//tutte le gabbie dello zoo contengono almeno un animale
+//			System.out.println("\nTutte gabbie dello zoo sono occupate");
+//		}
+//		else {
+//			//creazione di una gabbia con un codice e contenente un gruppo di animali
+//			gabbia[i] = new Gabbia(codice, creaGruppoAnimali());
+//			System.out.println("\n\tGabbia registrata con successo\n");
+//		}
+//
+//	}
+//	/**
+//	 * metodo per aggiungere un animale ad una gabbia, dato il codice della gabbia
+//	 * @param codice
+//	 */
+//	private void aggiungiAGabbia(Gabbia[] gabbie, String codice) {
+//		//inizializzazione del menu per la scelta di una animale
+//		String[] vociMenu = new String[3];
+//		vociMenu[0] = "Tigre";
+//		vociMenu[1] = "Gorilla";
+//		vociMenu[2] = "Pinguino";
+//		Menu menu = new Menu(vociMenu);
+//		//scelta del menu
+//		int scelta = 0;
+//
+//		//ricerca dell'indice della gabbia corrispondente al codice
+//		int index = 0;
+//		//memorizzare la posizione all'interno di una gabbia in cui mettere il nuovo animale
+//		int anIndex = 0;
+//		//memorizzare il contenuto della gabbia temporatenamente
+//		Animale[] tAn = new Animale[MAXAN];
+//		for(index = 0; index < NUMGABBIE && (((gabbie[index] != null)) && (gabbie[index].getCodice() != codice)); index++) {
+//
+//		}
+//		index--;
+//		if((index == NUMGABBIE - 1) && ((gabbie[index] == null) || (gabbie[index].getCodice() != codice))) {
+//			System.out.println("\n Gabbia non trovata\n");
+//		}
+//		else {
+//			//ottenuto l'indice della gabbia corrispondente, si aggiunge un animale, se essa non è piena
+//			gabbie[index].copiaAnimali(tAn);
+//			for(anIndex = 0; anIndex < MAXAN && (tAn[anIndex] != null); anIndex++) {
+//
+//			}
+//			if((anIndex == MAXAN -1) && (tAn[anIndex] != null)) {
+//				System.out.println("\n Non e' possibile inserire un animale in questa gabbia perche' e piena");
+//			}
+//			else {
+//				//inserimento di un animale
+//				System.out.println("\n Selezionare l'animale da inserire:");
+//				scelta = menu.sceltaMenu();
+//				switch(scelta) {
+//				case 1:
+//					tAn[anIndex] = creaTigre();
+//					break;
+//
+//				case 2:
+//					tAn[anIndex] = creaGorilla();
+//					break;
+//
+//				case 3:
+//					tAn[anIndex] = creaPinguino();
+//					break;
+//
+//				default: System.out.println("\n Animale non riconosciuto");
+//				}
+//				//aggiunta di del nuovo gruppo di animali alla gabbia
+//				gabbie[index].setAnimali(tAn);
+//				System.out.println("\n\tAnimale aggiunto con successo\n");
+//			}
+//		}
+//	}
+//	/**
+//	 * trova l'indice della gabbia e del vettore animali corrispondente e nome di animale
+//	 * @param nome
+//	 * @param zoo
+//	 * @return
+//	 */
+//	private int[] trovaAnimale(String nome, Gabbia[] zoo) {
+//		//array che contiene l'indice della gabbia e l'indice dell'animale cercato
+//		int[] coord = new int[2];
+//		for(int i = 0; i < 2; i++) {
+//			coord[i] = NULLVAL;
+//		}
+//		//array temporaneo per memorizzare gli animali di una gabbia
+//		Animale[] tAn = new Animale[MAXAN];
+//		//andando ad analizzare ogni gabbia inizializzata
+//		for(int g = 0; g < NUMGABBIE && (zoo[g] != null); g++) {
+//			//per ogni gabbia cercare nel suo array di animali l'animale con il nome cercato
+//			tAn = zoo[g].getAnimali();
+//			//posizione in cui si cerca un animale
+//			int a = 0;
+//			do {
+//				String n = tAn[a].getNome();
+//				if(n.equals(nome)) {
+//					coord[0] = g;
+//					coord[1] = a;
+//				}
+//
+//				a++;
+//			}
+//			while((a < MAXAN) && (tAn[a] != null) && (tAn[a - 1].getNome() != nome));
+//		}
+//
+//		return coord;
+//	}
+//
+//	/**
+//	 * metodo per ottenere tutte le caratteristiche di un animale, dato l'indice della gabbia e del vettore animali
+//	 * @param nome
+//	 */
+//	private void ottieniCaratteristiche(int[] coordinate, Gabbia[] gabbie) {
+//		//memorizzare l'indice della gabbia
+//		int gabbia = coordinate[0];
+//		//memorizzare l'indice dell'animale all'interno di una gabbia
+//		int animale = coordinate[1];
+//		if((gabbia != NULLVAL) && (animale != NULLVAL)) {
+//			//memorizzare il contenuto di una gabbia
+//			Animale[] a = new Animale[MAXAN];
+//			//stampo le caratteristiche della gabbia
+//			System.out.println("\n\tCaratteristiche della gabbia:");
+//			System.out.println(" Codice: "+gabbie[gabbia].getCodice());
+//			//ottengo dalla gabbia gli animali corrispondenti
+//			a = gabbie[gabbia].getAnimali();
+//			a[animale].stampaCaratteristiche();
+//			System.out.println("");
+//		}
+//		else {
+//			System.out.println("\n Animale non trovato\n");
+//		}
+//	}
+//
+//	private void ottieniTutteCaratteristiche(Gabbia[] gabbie) {
+//		//contatore di animali dello zoo
+//		int conta = 0;
+//		//per ogni gabbia
+//		for(int g = 0; g < NUMGABBIE && (gabbie[g] != null); g++) {
+//			//memorizzare temporaneamente gli animali della gabbia
+//			Animale[] an = new Animale[MAXAN];
+//			an = gabbie[g].getAnimali();
+//			//per ogni animale visualizzo le caratteristiche
+//			System.out.println("\n\tCaratteristiche della gabbia:");
+//			System.out.println(" Codice: "+gabbie[g].getCodice());
+//			for(int a = 0; a < MAXAN && (an[a] != null); a++) {
+//				//stampo le caratteristiche di un animale
+//				an[a].stampaCaratteristiche();
+//				//incrementa il contatore degli animali totali
+//				conta++;
+//			}
+//
+//		}
+//		System.out.println("\n\tNello zoo sono presenti "+conta+" animali\n");
+//	}
+//
+//	/**
+//	 * funzione principale del programma
+//	 * @param args
+//	 */
+//
+//	public static void main(String[] args) {
+//		Tastiera t = new Tastiera();
+//		//menu principale del programma
+//		String[] mainMenu = new String[5];
+//		mainMenu[0] = "Creazione di una nuova gabbia";
+//		mainMenu[1] = "Aggiunta di un animale ad una gabbia";
+//		mainMenu[2] = "Ottenere le caratteristiche di tutti gli animali";
+//		mainMenu[3] = "Ottenere le caratteristiche di un singolo animale";
+//		mainMenu[4] = "Uscita";
+//		Menu menu = new Menu(mainMenu);
+//		int scelta = 0;
+//
+//		GestioneZoo zoo = new GestioneZoo();
+//		zoo.gabbie = new Gabbia[NUMGABBIE];
+//		//inizializzazione di tutto l'array di gabbie a null: lo zoo è vuoto
+//		for(int i = 0; i < NUMGABBIE; i++) {
+//			zoo.gabbie[i] = null;
+//		}
+//		//intestazione del programma
+//
+//
+//		do {
+//			System.out.println("\tGESTIONE DI UNO ZOO \n");
+//			scelta = menu.sceltaMenu();
+//			switch(scelta) {
+//			case 1:
+//				//creazione di una nuova gabbia
+//				zoo.aggiungiGabbia(zoo.gabbie);
+//				break;
+//
+//			case 2:
+//				//aggiunta di un animale ad una gabbia esistente
+//				System.out.print("\n Inserire il codice della gabbia: ");
+//				String codice = t.leggiString();
+//				zoo.aggiungiAGabbia(zoo.gabbie, codice);
+//
+//				break;
+//
+//			case 3:
+//				System.out.println("\n\tCARATTERISTICHE DI TUTTI GLI ANIMALI\n");
+//				zoo.ottieniTutteCaratteristiche(zoo.gabbie);
+//				break;
+//
+//			case 4:
+//				//ottenere le caratteristiche di un singolo animale
+//				System.out.print("\n Inserire il nome dell'animale: ");
+//				String nome = t.leggiString();
+//				zoo.ottieniCaratteristiche(zoo.trovaAnimale(nome, zoo.gabbie), zoo.gabbie);
+//				break;
+//
+//			case 5:
+//				System.out.println("\n\tUscendo dal programma si perderranno tutti i dati dello zoo");
+//				break;
+//
+//			default: System.out.println("\n\tModalita' non riconosciuta\n");
+//			}
+//		}
+//		while (scelta != 5);
+//
+//
+//
+//	}
+
+}

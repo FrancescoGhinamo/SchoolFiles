@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Tastiera.java&apos; to &apos;Compito 5/src/centralinaAuto.input&apos;&#x0D;&#x0A;- Original project: &apos;Compito 4&apos;&#x0D;&#x0A;- Destination element: &apos;Compito 5/src/centralinaAuto.input&apos;&#x0D;&#x0A;- Original element: &apos;portoNavi.input.Tastiera.java&apos;" description="Copy compilation unit" destination="=Compito 5/src&lt;centralinaAuto.input" element1="/src&lt;portoNavi.input{Tastiera.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1532954497939" units="1" version="1.0"/>
+</session>

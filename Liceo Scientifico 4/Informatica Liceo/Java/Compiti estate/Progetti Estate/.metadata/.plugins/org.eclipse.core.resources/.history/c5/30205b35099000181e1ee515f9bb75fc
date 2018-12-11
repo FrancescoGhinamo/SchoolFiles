@@ -1,0 +1,15 @@
+package es12;
+
+public class Aggiusteria {
+	
+	public static final int MAX_POSTI = 10;
+	
+	private PostoRiparazione[] posti;
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

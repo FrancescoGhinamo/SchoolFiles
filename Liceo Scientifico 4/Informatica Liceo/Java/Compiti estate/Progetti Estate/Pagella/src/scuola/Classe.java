@@ -1,0 +1,73 @@
+package scuola;
+
+public class Classe {
+	
+	private static final int MAX_STUD = 25;
+	private String nome;
+	private Studente[] studenti;
+	
+	public Classe(String nome) {
+		this.nome = nome;
+		this.studenti = new Studente[MAX_STUD];
+		registraStudenti();
+	}
+	
+	private int primoIndiceLibero() {
+		int i = 0;
+		for(i = 0; (i < studenti.length) && (studenti[i] == null); i++) {
+			
+		}
+		if(i >= studenti.length) {
+			i = studenti.length - 1;
+		}
+		
+		return i;
+	}
+	
+	public Studente creaStudente() {
+		Tastiera t = new Tastiera();
+		System.out.println(" Creazione di uno studente");
+		System.out.print(" Inserire il nome: ");
+		return new Studente(t.leggiString());
+	}
+	
+	public void aggiungiStudente(Studente s) {
+		studenti[primoIndiceLibero()] = s;
+	}
+	
+	public void registraStudenti() {
+		Tastiera t = new Tastiera();
+		do {
+			System.out.println("\n Inserire i dati di uno studente");
+			aggiungiStudente(creaStudente());
+			System.out.print(" Continuare con l'inserimento? ");
+		}
+		while(t.leggiBoolean() == true);
+	}
+	
+	public float calcolaMedia() {
+		int somma = 0, num = 0;
+		for(num = 0; num < primoIndiceLibero(); num++) {
+			somma += studenti[num].calcolaMedia();
+		}
+		return (float) somma / num;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public Studente[] getStudenti() {
+		return studenti;
+	}
+	
+	public String toString() {
+		String ris = "\n\t\tCLASSE "+nome;
+		ris += "\n Studenti:\n";
+		for(int i = 0; i < primoIndiceLibero(); i++) {
+			ris += studenti[i].toString();
+		}
+		return ris;
+	}
+
+}

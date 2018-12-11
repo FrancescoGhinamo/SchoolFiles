@@ -1,0 +1,7 @@
+MdT = (A, I, S, s0, d)
+A = (0, 1, 2, ,3 ,4 ,,5 ,6, ,7 ,8, 9, blank, #)
+I = A - (blank)
+S = (Rip0, Rip1)
+s0 = Rip0
+d: (i, s) -> (i = 9 ? (0: s = Rip1) : (s = Rip1 ? (10 + i + 1; s = Rip0) : (i + 1)))
+

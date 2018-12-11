@@ -1,0 +1,3 @@
+perimetro(cat1, cat2)
+assegna ip = sqrt(cat1^2 + cat2^2)
+restituisci cat1 + cat2 + ip

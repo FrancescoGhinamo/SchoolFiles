@@ -1,0 +1,9 @@
+package animali;
+
+public enum Animali {
+	
+	GORILLA,
+	PINGUINO,
+	TIGRE;
+
+}

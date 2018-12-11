@@ -1,0 +1,7 @@
+Dati di input: popolazione pop1 e popolazione anno successivo pop2
+Dati di output: incremento di popolazione
+
+Pseudocodifica:
+inizio
+	incremento = pop2 - pop1
+fine

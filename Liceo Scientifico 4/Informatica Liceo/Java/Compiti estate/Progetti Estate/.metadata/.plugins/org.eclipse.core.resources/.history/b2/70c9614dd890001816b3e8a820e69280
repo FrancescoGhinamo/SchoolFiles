@@ -1,0 +1,8 @@
+package bicicletta;
+
+public class CameraAria extends Componente {
+	
+	private float diametroIn;
+	private float TipoValvola valvola;
+
+}

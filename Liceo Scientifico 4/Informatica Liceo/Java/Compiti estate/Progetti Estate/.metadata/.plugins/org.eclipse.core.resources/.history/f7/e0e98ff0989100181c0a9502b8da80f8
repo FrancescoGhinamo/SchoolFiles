@@ -1,0 +1,7 @@
+package regnoVegetale;
+
+import PianteSenzaFiori;
+
+public class Alga extends PianteSenzaFiori {
+
+}

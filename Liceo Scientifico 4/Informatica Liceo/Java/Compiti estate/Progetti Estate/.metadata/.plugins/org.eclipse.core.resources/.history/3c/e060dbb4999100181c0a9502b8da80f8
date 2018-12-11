@@ -1,0 +1,7 @@
+package regnoVegetale;
+
+import PianteFoglieNervatureParallele;
+
+public class Graminacee extends PianteFoglieNervatureParallele {
+
+}

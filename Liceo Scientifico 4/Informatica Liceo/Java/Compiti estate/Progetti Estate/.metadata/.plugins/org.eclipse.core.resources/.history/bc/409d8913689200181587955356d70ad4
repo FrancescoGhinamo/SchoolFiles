@@ -1,0 +1,9 @@
+package portoNavi;
+
+public class NavePasseggeri extends Nave {
+	
+	private int nrPAsseggeri;
+	
+	
+
+}

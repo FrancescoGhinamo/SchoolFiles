@@ -1,0 +1,151 @@
+package es12;
+
+import common.Tastiera;
+
+public class Aggiusteria {
+	
+	public static final int MAX_POSTI = 10;
+	
+	private PostoRiparazione[] posti;
+	private int numeroOrdine = 0;
+	
+	public Aggiusteria() {
+		this.posti = new PostoRiparazione[MAX_POSTI];
+		for(int i = 0; i < posti.length; i++) {
+			posti[i] = null;
+		}
+	}
+	
+	public int primoIndiceLibero() {
+		int i = 0;
+		for(i = 0; i < (posti.length) && (posti[i] != null); i++) {
+			
+		}
+		return i;
+	}
+	
+	public Motozappa creaMotozappa(MacchinaAgricola _m) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Inserire il numero di ruote: ");
+		int numR = t.leggiInt();
+		return new Motozappa(_m.getNumeroOrdine(), _m.getMarca(), _m.getCostoRiparazione(), numR);
+	}
+	
+	public Tagliaerba creaTagliaerba(MacchinaAgricola _m) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Inserire il numero di ruote: ");
+		int numR = t.leggiInt();
+		return new Tagliaerba(_m.getNumeroOrdine(), _m.getMarca(), _m.getCostoRiparazione(), numR);
+	}
+	
+	public Decespugliatore creaDecespugliatore(MacchinaAgricola _m) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Avviamento elettronico? ");
+		boolean avvE = t.leggiBoolean();
+		return new Decespugliatore(_m.getNumeroOrdine(), _m.getMarca(), _m.getCostoRiparazione(), avvE);
+	}
+	
+	public MacchinaAgricola creaMacchina(float costo) {
+		Tastiera t = new Tastiera();
+		MacchinaAgricola m = null;
+		System.out.println("\nREGISTRAZIONE DI UNA MACCHINA AGRICOLA");
+		System.out.print(" Inserire la marca: ");
+		String marca = t.leggiString();
+		System.out.println(" Tipologie di macchine disponibili:");
+		System.out.println(" 1 - motozappa");
+		System.out.println(" 2 - tagliaerba");
+		System.out.println(" 3 - decespugliatore");
+		System.out.print(" Inserire la tipologia: ");
+		int s = t.leggiInt();
+		MacchinaAgricola _m = new MacchinaAgricola(numeroOrdine++, marca, costo);
+		switch(s) {
+		case 1:
+			m = creaMotozappa(_m);
+			break;
+		
+		case 2:
+			m = creaTagliaerba(_m);
+			break;
+			
+		case 3:
+			m = creaDecespugliatore(_m);
+			break;
+			
+		default:
+			System.out.println(" Tipo di macchinario non specificato");
+		}
+		return m;
+	}
+	
+	public PostoRiparazione creaPostoRiparazione() {
+		Tastiera t = new Tastiera();
+		System.out.println("\n REGISTRAZIONE DI UN POSTO DI RIPARAZIONE");
+		System.out.print(" Inserire la descrizione della lavorazione: ");
+		String des = t.leggiString();
+		System.out.print(" Inserire il costo della lavorazione: ");
+		float costo = t.leggiFloat();
+		return new PostoRiparazione(des, costo, creaMacchina(costo));
+	}
+
+	
+	
+	public void aggiungiPosto(PostoRiparazione p) throws FullException {
+		int i = primoIndiceLibero();
+		if(i < MAX_POSTI) {
+			posti[i] = p;
+		}
+		else {
+			throw new FullException();
+		}
+	}
+	
+	public String toString() {
+		String ris = "";
+		ris += "\n\tSITUAZIONE DELL'AGGUISTERIA";
+		for(int i = 0; i < posti.length; i++) {
+			try {
+				ris += posti[i].toString();
+			}
+			catch(NullPointerException e) {
+				ris += "\nPosto libero";
+			}
+		}
+		return ris;
+	}
+	
+	public static void main(String[] args) {
+		Tastiera t = new Tastiera();
+		Aggiusteria a = new Aggiusteria();
+		int scelta = 0;
+		do {
+			System.out.println("\n\tAGGIUSTERIA");
+			System.out.println(" 1 - registrare un nuovo posto di lavoro");
+			System.out.println(" 2 - visualizzare la situazione dell'aggiusteria");
+			System.out.println(" 0 - uscita");
+			System.out.print(" Inserire la scelta: ");
+			scelta = t.leggiInt();
+			switch(scelta) {
+			case 1:
+				try {
+					a.aggiungiPosto(a.creaPostoRiparazione());
+				} catch (FullException e) {
+					System.out.println(e);
+				}
+				break;
+				
+			case 2:
+				System.out.println(a.toString());
+				break;
+				
+			case 0:
+				System.out.println(" Uscita");
+				break;
+				
+			default:
+				System.out.println(" Opzione non riconosciuta");
+			}
+		}
+		while(scelta != 0);
+	}
+
+}

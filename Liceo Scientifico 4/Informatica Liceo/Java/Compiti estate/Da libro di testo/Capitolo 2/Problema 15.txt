@@ -1,0 +1,21 @@
+Dati in input: numero intero N
+Dati in output: valore di verità della proposizione N^2 = somma primi N numeri dispari
+
+Pseudocodifica
+inizio
+	definisci sommaDispari = 0
+	definisci _corrente = 1
+	fino a che conta raggiunge N
+		se _corrente % 2 != 0 allora
+		sommaDispari + corrente
+		conta = conta + 1
+		fine se
+		_corrente = _corrente + 1
+	fine fino
+	
+	se N * N = sommaDispari allora
+		ritorna vero
+	altrimenti
+		ritorna falso
+	fine se
+fine

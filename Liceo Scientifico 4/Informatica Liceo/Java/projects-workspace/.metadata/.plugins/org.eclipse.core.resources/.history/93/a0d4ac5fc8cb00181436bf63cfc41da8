@@ -1,0 +1,43 @@
+package zoo;
+
+import animali.Animale;
+
+/**
+ * classe per rappresentare una gabbia contenente animali
+ * @author Francesco
+ *
+ */
+public class Gabbia {
+	private String codice;
+	private Animale[] animali;
+
+	public Gabbia(String codice, Animale[] animali) {
+		this.animali = animali;
+		this.codice = codice;
+	}
+
+	public String getCodice() {
+		return this.codice;
+	}
+
+	public void setCodice(String codice) {
+		this.codice = codice;
+	}
+
+	public Animale[] getAnimali() {
+		return this.animali;
+	}
+
+	public void setAnimali(Animale[] animali) {
+		this.animali = animali;
+	}
+
+	public void copiaAnimali(Animale[] destinazione) {
+		for(int c = 0; c < animali.length; c++) {
+			destinazione[c] = animali[c];
+		}
+	}
+
+
+
+}

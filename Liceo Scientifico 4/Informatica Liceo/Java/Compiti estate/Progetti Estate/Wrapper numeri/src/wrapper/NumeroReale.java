@@ -1,0 +1,95 @@
+package wrapper;
+
+import wrapper.eccezzioni.*;
+
+
+public class NumeroReale {
+
+	private double val;
+	
+	public NumeroReale(double val) throws NaNException {
+		super();
+		if(!Double.isNaN(val))
+			this.val = val;
+		else 
+			throw new NaNException();
+	}
+	
+	public double radiceQuadrata() throws NumeroNegativoException{
+		double sqrt = 0;
+		if(val > 0) {
+			sqrt = Math.sqrt(val);
+		}
+		else {
+			throw new NumeroNegativoException();
+		}
+		return sqrt;
+	}
+	
+	public double potenzaDiDue() {
+		return Math.pow(val, 2);
+	}
+	
+	public double potenzaDiTre() {
+		return Math.pow(val, 3);
+	}
+	
+	public double inversione() {
+		return -1 * val;
+	}
+	
+	public double valoreAssoluto() {
+		return Math.abs(val);
+	}
+	
+	public String convertiBinario() {
+		return Long.toBinaryString(Double.doubleToLongBits(val));
+	}
+	
+	public String convertiOttale() {
+		return Long.toOctalString(Double.doubleToLongBits(val));
+	}
+	
+	public String convertiEsadecimale() {
+		return Long.toHexString(Double.doubleToLongBits(val));
+	}
+
+
+
+	public double getVal() {
+		return val;
+	}
+
+	public static void main(String[] args) {
+		Tastiera t = new Tastiera();
+		System.out.print(" Inserire un valore: ");
+		NumeroReale r = null; 
+		try {
+			r = new NumeroReale(t.leggiDouble());
+		} catch (NaNException e) {
+			System.out.println(e);
+		}
+		
+		try {
+			System.out.println(" Radice quadrata: "+r.radiceQuadrata());
+		} catch (NumeroNegativoException e) {
+			System.out.println(e);
+		}
+		
+		try {
+			System.out.println(" Potenza di due: "+r.potenzaDiDue());
+			System.out.println(" Potenza di tre: "+r.potenzaDiTre());
+			System.out.println(" Inversione di segno: "+r.inversione());
+			System.out.println(" Valore assoluto: "+r.valoreAssoluto());
+			System.out.println(" Conversione in binario: "+r.convertiBinario());
+			System.out.println(" Conversione in ottale: "+r.convertiOttale());
+			System.out.println(" Conversione in esadecimale: "+r.convertiEsadecimale());
+		}
+		catch (NullPointerException e) {
+			System.out.println(e);
+		}
+	}
+	
+	
+	
+}

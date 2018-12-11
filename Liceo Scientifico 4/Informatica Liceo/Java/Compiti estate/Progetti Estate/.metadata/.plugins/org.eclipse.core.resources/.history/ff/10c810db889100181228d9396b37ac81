@@ -1,0 +1,21 @@
+package scuola;
+
+public class Classe {
+	
+	private static final int MAX_STUD = 25;
+	private String nome;
+	private Studente[] studenti;
+	
+	private int primoIndiceLibero() {
+		int i = 0;
+		for(i = 0; (i < studenti.length) && (studenti[i] == null); i++) {
+			
+		}
+		if(i >= studenti.length) {
+			i = studenti.length - 1;
+		}
+		
+		return i;
+	}
+
+}

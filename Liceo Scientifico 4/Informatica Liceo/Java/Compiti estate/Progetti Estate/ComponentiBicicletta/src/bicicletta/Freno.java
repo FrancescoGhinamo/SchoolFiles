@@ -1,0 +1,25 @@
+package bicicletta;
+
+public class Freno extends Componente {
+
+	private boolean isDisco;
+	private boolean isIdraulico;
+	public Freno(String marca, float prezzo, boolean isDisco, boolean isIdraulico) {
+		super(marca, prezzo);
+		this.isDisco = isDisco;
+		this.isIdraulico = isIdraulico;
+	}
+	
+	public void frena() {
+		
+	}
+	public boolean isDisco() {
+		return isDisco;
+	}
+	public boolean isIdraulico() {
+		return isIdraulico;
+	}
+	
+	
+
+}

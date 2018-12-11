@@ -1,0 +1,19 @@
+package es8;
+
+public class Parallelogramma {
+	
+	private float diagonaleMaggiore;
+	private float diagonaleMinore;
+	private float angoloDiagonaleMagOrizz;
+	
+	
+	private float calcolaAltezza() {
+		return (float) (diagonaleMaggiore * Math.sin(angoloDiagonaleMagOrizz));
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

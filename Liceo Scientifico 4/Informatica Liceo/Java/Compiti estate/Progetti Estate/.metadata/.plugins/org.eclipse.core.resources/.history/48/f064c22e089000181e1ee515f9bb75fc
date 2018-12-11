@@ -1,0 +1,9 @@
+package es12;
+
+public class PostiRiparazione {
+
+	private MacchinaAgricola macchina;
+	private String descrizioneRiparazione;
+	
+	
+}

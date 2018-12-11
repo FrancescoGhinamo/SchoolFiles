@@ -1,0 +1,8 @@
+Funzione sommaNNumeri(n)
+inizio
+	se = 1 allora
+		restituisci 1
+	altrimenti
+		restituisci n + sommaNNumeri(n - 1)
+	fine se
+fine

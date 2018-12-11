@@ -1,0 +1,138 @@
+package libreria.gestione;
+
+import java.util.GregorianCalendar;
+
+import libreria.dati.Autore;
+import libreria.dati.Cliente;
+import libreria.dati.Genere;
+import libreria.dati.Libro;
+import libreria.eccezioni.TroppiAutoriException;
+import libreria.input.Tastiera;
+
+public class Libreria {
+
+	public static final int MAX_LIBRI = 1000;
+	public static final int MAX_CLIENTI = 1000;
+	
+	private Libro[] libri;
+	private Cliente[] clienti;
+	
+	
+	public int primoIndiceLibero(Object[] vet) {
+		int index = 0;
+		while(vet[index] != null && index < vet.length) {
+			index++;
+		}
+		return index;
+	}
+	
+	
+	public Libreria() {
+		libri = new Libro[MAX_LIBRI];
+		clienti = new Cliente[MAX_CLIENTI];
+	}
+	
+	public Autore creaAutore() {
+		Tastiera t = new Tastiera();
+		System.out.println("\t Registrazione di un autore");
+		System.out.print(" Inserire il nome: ");
+		String nome = t.leggiString();
+		System.out.print(" Inserire il cognome: ");
+		String cognome = t.leggiString();
+		System.out.print(" Inserire la data di nascita: ");
+		GregorianCalendar data = t.leggiCalendar();
+		System.out.print(" Inserire il codice: ");
+		String codice = t.leggiString();
+		return new Autore(nome, cognome, data, codice);
+	}
+	
+	public Autore[] registraAutori(int nrAutori) throws TroppiAutoriException {
+		
+		Autore[] _autori;
+		
+		if(nrAutori > Libro.MAX_AUTORI) {
+			throw new TroppiAutoriException();
+		}
+		else {
+			_autori = new Autore[nrAutori];
+			for(int i = 0; i < _autori.length; i++) {
+				_autori[i] = creaAutore();
+			}
+		}
+
+		return _autori;
+	}
+	
+	
+	public Libro creaLibro() {
+		Tastiera t = new Tastiera();
+		System.out.println("\n\tREGISTRAZIONE DI UN LIBRO");
+		System.out.print(" Inserire il codice ISBN: ");
+		String isbn = t.leggiString();
+		System.out.print(" Inserire il titolo: ");
+		String titolo = t.leggiString();
+		System.out.println(" Generi: ");
+		System.out.println(" 1 - fantasy");
+		System.out.println(" 2 - horror");
+		System.out.print(" Inserire il genere: ");
+		Genere genere = null;
+		int scelta = t.leggiInt();
+		switch(scelta) {
+		case 1:
+			genere = Genere.FANTASY;
+			break;
+			
+		case 2:
+			genere = Genere.HORROR;
+			break;
+			
+		default:
+			System.out.println(" Genere non specificato");
+		}
+		
+		System.out.print(" Inserire il prezzo: ");
+		float prezzo = t.leggiFloat();
+		System.out.print(" Inserire il numero di autori: ");
+		Autore[] autori = null;
+		try {
+			 autori = registraAutori(t.leggiInt());
+		} catch (TroppiAutoriException e) {
+			System.out.println(e);
+			try {
+				autori = registraAutori(5);
+			} catch (TroppiAutoriException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+		}
+		
+		return new Libro(isbn, titolo, genere, prezzo, autori);	
+	}
+	
+	public void aggiungiLibro(Libro l) {
+		libri[primoIndiceLibero(libri)] = l;
+	}
+	
+	public static void main(String[] args) {
+		Libreria lib = new Libreria();
+		lib.aggiungiLibro(lib.creaLibro());
+		System.out.println(" Finito");
+	}
+	
+	public static int getMaxLibri() {
+		return MAX_LIBRI;
+	}
+	public static int getMaxClienti() {
+		return MAX_CLIENTI;
+	}
+	public Libro[] getLibri() {
+		return libri;
+	}
+	public Cliente[] getClienti() {
+		return clienti;
+	}
+	
+	
+	
+}

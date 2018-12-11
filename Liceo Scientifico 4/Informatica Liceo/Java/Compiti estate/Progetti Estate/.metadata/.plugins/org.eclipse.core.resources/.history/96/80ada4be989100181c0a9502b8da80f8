@@ -1,0 +1,7 @@
+package regnoVegetale;
+
+import PiantaSezaFiori;
+
+public class Muschio extends PiantaSezaFiori {
+
+}

@@ -1,0 +1,5 @@
+package libreria.libro;
+
+public class Autore {
+
+}

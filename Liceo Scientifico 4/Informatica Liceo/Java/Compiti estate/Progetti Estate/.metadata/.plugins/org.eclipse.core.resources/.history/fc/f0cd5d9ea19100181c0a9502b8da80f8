@@ -1,0 +1,28 @@
+package wrapper;
+
+public class NumeroReale {
+
+	private double val;
+	
+	
+
+	public NumeroReale(double val) {
+		super();
+		this.val = val;
+	}
+	
+	public double radiceQuadrata() {
+		
+	}
+
+
+
+	public double getVal() {
+		return val;
+	}
+
+	
+	
+	
+	
+}

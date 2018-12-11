@@ -1,0 +1,16 @@
+package es10;
+
+public class Moto extends Veicolo {
+
+	private int tempi;
+
+	public Moto(String marca, int anno, int cilindrata, int tempi) {
+		super(marca, anno, cilindrata);
+		this.tempi = tempi;
+	}
+
+	public int getTempi() {
+		return tempi;
+	}
+	
+}

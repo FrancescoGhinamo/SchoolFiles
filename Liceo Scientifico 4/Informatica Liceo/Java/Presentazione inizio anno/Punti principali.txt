@@ -1,0 +1,23 @@
+Programmazione ad oggetti:
+	visione a più alto llivello del problema
+	estensione del campo di problemi risolvibili, sia a stampo matematico (come in C) ma anche caratteristici della vita
+	di tutti i giorni.
+	Utile a rappresentare situazioni del mondo reale (oggetti...)
+	Gli oggetti hanno caratteristiche (attributi) e comportamenti (metodi)
+	L'oggetto è definito da una classe (.java)
+
+UML:
+	schemi che permettono di rappresentare la struttura del problema attraverso la rappresentazione delle classi
+	progettazione prima dello sviluppo del programma per risparmio di tempo
+
+Portabilità e riutilizzabilità del linguaggio:
+	compilazione intermedia, necessaria JRE per esecuzione
+	per eseguire un qualsiasi programma Java basta installare il JRE in funzione della piattaforma
+
+NXT Robot:
+	
+	Gestione degli eventi
+	Rappresentazione ad oggetti del robot
+	wrapper
+	scomporre in più parti i problemi
+	utilizzo di sensori e motori

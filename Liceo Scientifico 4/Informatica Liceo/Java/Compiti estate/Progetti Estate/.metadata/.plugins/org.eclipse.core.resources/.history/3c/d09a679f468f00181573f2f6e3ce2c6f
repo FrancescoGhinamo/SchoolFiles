@@ -1,0 +1,12 @@
+package es10;
+
+import java.util.Vector;
+
+public class Garage {
+
+	private Vector<Veicolo> veicoli;
+	
+	public Garage() {
+		veicoli = new Vector<Veicolo>();
+	}
+}

@@ -1,0 +1,8 @@
+package leJOS;
+
+public class Motore {
+
+	private Porta porta;
+	
+	
+}

@@ -1,0 +1,12 @@
+package regnoVegetale;
+
+import RicercaInformazioni;
+
+public class tassonomia extends RicercaInformazioni {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

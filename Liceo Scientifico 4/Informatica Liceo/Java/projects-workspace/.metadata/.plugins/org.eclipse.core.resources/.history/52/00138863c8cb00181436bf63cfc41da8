@@ -1,0 +1,27 @@
+package zoo;
+
+import java.util.Hashtable;
+
+public class Zoo {
+	
+	private Hashtable<String, Gabbia> gabbie;
+	
+	public Zoo() {
+		gabbie = new Hashtable<String, Gabbia>();
+	}
+	
+	public void aggiungiGabbia(Gabbia g) {
+		gabbie.put(g.getCodice(), g);
+	}
+
+	public Hashtable<String, Gabbia> getGabbie() {
+		return gabbie;
+	}
+
+	public void setGabbie(Hashtable<String, Gabbia> gabbie) {
+		this.gabbie = gabbie;
+	}
+	
+	
+
+}

@@ -1,0 +1,22 @@
+Elenco di programmi TV
+ogni programma:
+- Data e ora inizio
+- durata minuti
+- titolo
+- genere:
+	- film
+	- varietà
+	- documentario
+	- informazione
+- target:
+	- per tutti
+	- vietata < 14
+	- vietata < 18
+- eventuale descrizione
+
+Implementare:
+memorizza su CSV (da File)
+carica da CSV (da File)
+
+Aggiungere interfaccia grafica.
+esercizio anagrafe con lettura e scrittura

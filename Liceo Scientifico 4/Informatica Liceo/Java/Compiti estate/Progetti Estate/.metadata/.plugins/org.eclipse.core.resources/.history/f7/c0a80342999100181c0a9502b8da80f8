@@ -1,0 +1,8 @@
+package regnoVegetale;
+
+public class PiantaFoglieNervatureParallele {
+
+	public String toString() {
+		return super.toString() + " e ha le foglie con le nervature parallele.";
+	}
+}

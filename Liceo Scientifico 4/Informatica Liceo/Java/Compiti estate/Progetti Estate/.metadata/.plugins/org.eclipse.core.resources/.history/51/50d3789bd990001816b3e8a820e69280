@@ -1,0 +1,8 @@
+package bicicletta;
+
+public class Trasmissione extends Componente {
+
+	private Pedali pedali;
+	private Cambio cambio;
+	
+}

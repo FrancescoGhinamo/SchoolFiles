@@ -1,0 +1,11 @@
+Dati in input: equazione di una retta nella forma y = mx + q e le coordinate di un punto (m, q, xp, yp)
+Dati in output: appartenenza del punto alla retta
+
+Pseudocodifica
+inizio
+	se yp = m * xp + q allora
+		restituisci appartiene
+	altrimenti
+		restituisci non apparteine
+	fine se
+fine

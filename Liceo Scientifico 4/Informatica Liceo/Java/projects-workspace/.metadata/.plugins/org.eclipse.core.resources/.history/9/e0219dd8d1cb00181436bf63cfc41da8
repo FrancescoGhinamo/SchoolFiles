@@ -1,0 +1,8 @@
+package gui;
+
+public enum Layout {
+	
+	ANIMALI_PELO,
+	ANIMALI_NO_PELO;
+
+}

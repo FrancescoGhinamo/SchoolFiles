@@ -1,0 +1,21 @@
+package es8;
+
+public class Quadrato extends Rombo {
+
+	public Quadrato(float diagonale) {
+		super(diagonale, diagonale);
+	}
+	
+	private float calcolaLato() {
+		return (float) (diagonaleMaggiore / Math.sqrt(2));
+	}
+	
+	public float calcolaArea() {
+		return (float) Math.pow(calcolaLato(), 2);
+	}
+	
+	public float calcolaPerimetro() {
+		return calcolaLato() * 4;
+	}
+
+}

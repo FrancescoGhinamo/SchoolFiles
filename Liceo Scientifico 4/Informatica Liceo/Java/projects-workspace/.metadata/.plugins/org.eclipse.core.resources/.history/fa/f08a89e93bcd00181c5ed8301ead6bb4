@@ -1,0 +1,46 @@
+package voti;
+
+import java.util.GregorianCalendar;
+
+public class Voto {
+	
+	private String matricola;
+	private Materia materia;
+	private GregorianCalendar data;
+	private float valore;
+	
+	
+	
+	
+	public Voto(String matricola, Materia materia, GregorianCalendar data, float valore) {
+		super();
+		this.matricola = matricola;
+		this.materia = materia;
+		this.data = data;
+		this.valore = valore;
+	}
+	
+	
+	public String getMatricola() {
+		return matricola;
+	}
+	public void setMatricola(String matricola) {
+		this.matricola = matricola;
+	}
+	
+	public GregorianCalendar getData() {
+		return data;
+	}
+	public void setData(GregorianCalendar data) {
+		this.data = data;
+	}
+	public float getValore() {
+		return valore;
+	}
+	public void setValore(float valore) {
+		this.valore = valore;
+	}
+	
+	
+
+}

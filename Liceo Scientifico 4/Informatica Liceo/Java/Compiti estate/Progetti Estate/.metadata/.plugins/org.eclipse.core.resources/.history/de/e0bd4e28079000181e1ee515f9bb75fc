@@ -1,0 +1,14 @@
+package es12;
+
+public class Motozappa extends MacchinaAgricola {
+	
+	private int numeroRuote;
+
+	public Motozappa(int numeroOrdine, String marca, float costoRiparazione, int numeroRuote) {
+		super(numeroOrdine, marca, costoRiparazione);
+		this.numeroRuote = numeroRuote;
+	}
+	
+	
+
+}

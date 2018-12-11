@@ -1,0 +1,53 @@
+package leJOS;
+
+import lejos.nxt.Motor;
+
+public class Motore {
+
+	private Porta porta;
+
+	public Motore(Porta porta) {
+		super();
+		this.porta = porta;
+	}
+	
+	
+	public void gira(Direzione d) {
+		switch(d) {
+		case AVANTI:
+			switch(porta) {
+			case A:
+				Motor.A.forward();
+				break;
+			case B:
+				Motor.B.forward();
+				break;
+			case C:
+				Motor.C.forward();
+				break;
+			default:
+				break;
+			
+			}
+			break;
+		case INDIETRO:
+			switch(porta) {
+			case A:
+				Motor.A.backward();
+				break;
+			case B:
+				Motor.B.backward();
+				break;
+			case C:
+				Motor.C.backward();
+				break;
+			default:
+				break;
+			
+			}
+			break;
+		
+		}
+	}
+	
+}

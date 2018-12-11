@@ -1,0 +1,23 @@
+Anagrafica
+carta identità:
+- comune
+- data rilascio
+- data scadenza
+- cognome
+- nome
+- sesso
+- data nascita
+- luogo nascita
+- residenza
+- colore occhi
+- colore capelli
+- stato civile
+- prefessione
+- statura
+- segni particolari
+(foto)
+(firma)
+
+gestire la modifica: 
+selezione la riga, menu modifica che apre l stessa finestra di dialogo, infomandola con i dati dell'elemento selezionato
+	nel costruttore valorizzare risultato con cio che gli passo quando lo chiamo (poi valorizzare tutti i campi con le informazioni, se risultato non nullo)

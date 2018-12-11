@@ -1,0 +1,22 @@
+package voti;
+
+import java.util.ArrayList;
+
+public class ElencoVoti extends ArrayList<Voto> {
+
+	private static final long serialVersionUID = 1L;
+	
+	public float mediaTotaleStudente(String matricola) {
+		float sum = 0;
+		int n = 0;
+		for(int c = 0; c < this.size(); c++) {
+			if(this.get(c).getMatricola().equals(matricola)) {
+				n++;
+				sum += this.get(c).getValore();
+			}
+		}
+		
+		return sum / n;
+	}
+
+}

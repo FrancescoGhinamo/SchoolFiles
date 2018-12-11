@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;EquazioneGUI.java&apos; to &apos;Equazione lineare/src/euqazione.gui&apos;&#x0D;&#x0A;- Original project: &apos;Equazione lineare&apos;&#x0D;&#x0A;- Destination element: &apos;Equazione lineare/src/euqazione.gui&apos;&#x0D;&#x0A;- Original element: &apos;euqazione.EquazioneGUI.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;euqazione.gui" element1="/src&lt;euqazione{EquazioneGUI.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1539253976634" units="1" version="1.0"/>
+</session>

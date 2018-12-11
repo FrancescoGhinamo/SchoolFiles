@@ -1,0 +1,28 @@
+package es8;
+
+public class Parallelogramma {
+	
+	private float diagonaleMaggiore;
+	private float diagonaleMinore;
+	private float angoloDiagonaleMagOrizz;
+	
+	
+	public float calcolaAltezza() {
+		return (float) (diagonaleMaggiore * Math.sin(angoloDiagonaleMagOrizz * Math.PI/180));
+	}
+	
+	public float calcolaBase() { 	
+		return (float) (Math.sqrt(Math.pow(diagonaleMaggiore / 2,  2) - Math.pow(calcolaAltezza() / 2, 2)) + (diagonaleMinore / 2) * Math.cos(Math.asin(calcolaAltezza() / diagonaleMinore)));
+	}
+	
+	public float calcolaatoObliquo() {
+		return (float) (Math.pow(calcolaBase(), 2) + Math.pow(diagonaleMinore, 2) - 2 * diagonaleMinore * calcolaBase() * Math.cos(Math.asin(calcolaAltezza() / diagonaleMinore)));
+	}
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,160 @@
+package gestioneMagazzino.ui;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import eccezioni.MissingDataException;
+import gestioneMagazzino.dati.Articolo;
+import gestioneMagazzino.dati.ElencoArticoli;
+
+public class GestioneMagazzinoGUI extends JFrame implements ActionListener, ListSelectionListener {
+	
+	private static final long serialVersionUID = 3017912850787597385L;
+
+	private ElencoArticoli elenco;
+	
+	private JLabel lblCodice;
+	private JLabel lblDescrizione;
+	private JLabel lblPrezzo;
+	
+	private JTextField txtCodice;
+	private JTextField txtDescrizione;
+	private JTextField txtPrezzo;
+	
+	private JButton btnAggiungi;
+	private JButton btnVisualizza;
+	
+	private JButton btnOrdina;
+	private JComboBox<String> cmbOrdina;
+	
+	private DefaultListModel<Articolo> listModel;
+	private JList<Articolo> outList;
+	
+	
+	
+	public GestioneMagazzinoGUI() {
+		super("Gestione di un magazzino");
+		setExtendedState(MAXIMIZED_BOTH);
+		elenco = new ElencoArticoli();
+		initComponents();
+		
+	}
+	
+	public void initComponents() {
+		
+		lblCodice = new JLabel("Codice prodotto: ");
+		lblDescrizione = new JLabel("Descrizione: ");
+		lblPrezzo = new JLabel("Prezzo: ");
+		
+		txtCodice = new JTextField(30);
+		txtDescrizione = new JTextField(30);
+		txtPrezzo = new JTextField(30);
+		
+		btnAggiungi = new JButton("Aggiungi prodotto");
+		btnAggiungi.addActionListener(this);
+		btnVisualizza = new JButton("Visualizza prodotti");
+		btnVisualizza.addActionListener(this);
+		
+		listModel = new DefaultListModel<Articolo>();
+		outList = new JList<Articolo>(listModel);
+		outList.addListSelectionListener(this);
+		
+		
+		JPanel dataIn = new JPanel();
+		dataIn.setLayout(new GridLayout(4, 2, 3, 3));
+		
+		dataIn.add(lblCodice);
+		dataIn.add(txtCodice);
+		dataIn.add(lblDescrizione);
+		dataIn.add(txtDescrizione);
+		dataIn.add(lblPrezzo);
+		dataIn.add(txtPrezzo);
+		dataIn.add(btnAggiungi);
+		dataIn.add(btnVisualizza);
+		
+		
+		JScrollPane out = new JScrollPane(outList);
+		
+		this.setLayout(new BorderLayout());
+		this.add(dataIn, "North");
+		this.add(out, "Center");
+	
+		
+		
+	}
+	
+	public void registraArticoloDaDati() throws MissingDataException  {
+		if(txtCodice.getText().equals("") ||  txtDescrizione.getText().equals("") || txtPrezzo.getText().equals("")) {
+			throw new MissingDataException();
+		}
+		else {
+			aggiungiArticolo(txtCodice.getText(), txtDescrizione.getText(), Integer.parseInt(txtPrezzo.getText()));
+			txtCodice.setText("");
+			txtDescrizione.setText("");
+			txtPrezzo.setText("");
+			listModel.clear();
+			for(Articolo art: elenco) {
+				listModel.addElement(art);
+			}
+		}
+	}
+	
+	public void aggiungiArticolo(String codice, String descrizione, float prezzo) {
+		elenco.add(new Articolo(codice, descrizione, prezzo));
+	}
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource().equals(btnAggiungi)) {
+			try {
+				registraArticoloDaDati();
+			} catch (NumberFormatException | MissingDataException e1) {
+				JOptionPane.showMessageDialog(this, e1.getMessage(), "Errore", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+		else if(e.getSource().equals(btnVisualizza)) {
+			listModel.clear();
+			for(Articolo art: elenco) {
+				listModel.addElement(art);
+			}
+		}
+		
+	}
+	
+	@Override
+	public void valueChanged(ListSelectionEvent e) {
+		if(e.getSource().equals(outList)) {
+			JOptionPane.showMessageDialog(this, listModel.get(outList.getSelectedIndex()).toString()
+					, "Infromazioni", JOptionPane.INFORMATION_MESSAGE);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		GestioneMagazzinoGUI gest = new GestioneMagazzinoGUI();
+		gest.addWindowListener(new WinMan());
+		gest.setVisible(true);
+
+	}
+
+	
+
+	
+
+}

@@ -1,0 +1,10 @@
+package config;
+
+public interface Comandi {
+	
+	static final String ORDINA_CODICE = "Ordina_C";
+	static final String ORDINA_DESCRIZIONE = "Ordina_D";
+	static final String ORDINA_PREZZO = "Ordina_P";
+	
+
+}

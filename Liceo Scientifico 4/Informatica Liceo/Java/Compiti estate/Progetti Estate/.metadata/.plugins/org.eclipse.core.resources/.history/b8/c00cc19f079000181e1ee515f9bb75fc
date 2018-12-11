@@ -1,0 +1,5 @@
+package es12;
+
+public class Decespugliatore extends MacchinaAgricola {
+
+}

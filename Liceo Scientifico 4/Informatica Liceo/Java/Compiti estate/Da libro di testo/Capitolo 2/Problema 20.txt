@@ -1,0 +1,6 @@
+Errori lessicali:
+errori nella scrittura del nome di variabili e funzioni o parole chiave del linguaggio di programmazione
+Errori sintattici:
+errori nella delimitazione dei blocchi di selezione o iterativi. Errori nel passaggio di parametri alle funzioni
+Errori di run - time:
+alle funzioni vengono passati parametri non validi, si accede ad oggetti non istanziati o si punta ad un elemento oltre la dimensione di un vettore

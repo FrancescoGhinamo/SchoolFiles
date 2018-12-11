@@ -1,0 +1,5 @@
+package equazione.eccezioni;
+
+public class InserimentoErratoException extends Exception {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Tastiera.java&apos; to &apos;Compito 4/src/portoNavi.input&apos;&#x0D;&#x0A;- Original project: &apos;Compito 3&apos;&#x0D;&#x0A;- Destination element: &apos;Compito 4/src/portoNavi.input&apos;&#x0D;&#x0A;- Original element: &apos;centralinaMeteo.input.Tastiera.java&apos;" description="Copy compilation unit" destination="=Compito 4/src&lt;portoNavi.input" element1="/src&lt;centralinaMeteo.input{Tastiera.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1532783138366" units="1" version="1.0"/>
+</session>

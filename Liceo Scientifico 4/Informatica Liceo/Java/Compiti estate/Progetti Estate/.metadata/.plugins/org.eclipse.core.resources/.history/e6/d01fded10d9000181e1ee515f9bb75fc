@@ -1,0 +1,11 @@
+package libreria.libro;
+
+import java.util.GregorianCalendar;
+
+public class Autore {
+
+	private String codice;
+	private String nome;
+	private String cognome;
+	private GregorianCalendar dataNascita;
+}

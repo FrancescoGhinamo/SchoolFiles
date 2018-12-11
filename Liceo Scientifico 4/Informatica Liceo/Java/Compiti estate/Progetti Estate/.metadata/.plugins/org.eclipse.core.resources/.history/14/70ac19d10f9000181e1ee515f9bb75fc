@@ -1,0 +1,11 @@
+package libreria.interazione;
+
+import java.util.Vector;
+
+import libreria.libro.Libro;
+
+public class Libreria {
+
+	private Vector<Libro> libri;
+	private Vector<Cliente> clientiRegistrati;
+}

@@ -1,0 +1,12 @@
+INDEX VERSION 1.130+H:\File Liceo\Backup\Liceo Scientifico 4\Informatica Liceo\Java\projects-workspace\.metadata\.plugins\org.eclipse.jdt.core
+1064066227.index
+316260095.index
+655796541.index
+3844087462.index
+878720587.index
+2857135914.index
+814035024.index
+4275883969.index
+3526470506.index
+3317060497.index
+2897475434.index

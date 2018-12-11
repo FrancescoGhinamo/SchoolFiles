@@ -1,0 +1,9 @@
+cerchio:
+	raggio
+	calcolaCirconferenza
+	calcolaArea
+	
+poligono:
+	numero lati
+	calcolaPerimetri
+	calcolaArea

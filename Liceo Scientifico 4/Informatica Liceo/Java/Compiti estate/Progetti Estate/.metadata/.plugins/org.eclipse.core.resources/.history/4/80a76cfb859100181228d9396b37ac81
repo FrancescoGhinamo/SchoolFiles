@@ -1,0 +1,27 @@
+package scuola;
+
+public class Pagella {
+	
+	private static final int MAX_MATERIE = 10;
+	private Materia[] materie;
+	
+	private int primoIndiceLibero() {
+		int i = 0;
+		for(i = 0; (i < materie.length) && (materie[i] == null); i++) {
+			
+		}
+		if(i >= materie.length) {
+			i = materie.length - 1;
+		}
+		
+		return i;
+	}
+	
+	public Materia creaMateria() {
+		Tastiera t = new Tastiera();
+		System.out.println("\n\tCreazone di una nuova materia");
+		System.out.print(" Inserire il nome della materia: ");
+		return new Materia(t.leggiString());
+	}
+
+}
