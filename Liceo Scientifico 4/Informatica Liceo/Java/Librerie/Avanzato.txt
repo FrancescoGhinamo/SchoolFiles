@@ -1,0 +1,8 @@
+1 - realizzare un esplora risrse semplificato
+	selezionare una cartella di partenza (seleziona una radicee che deve essere una cartella)
+	con JList fare vedere contenuto della cartella. con doppio cick sul JList entro nella cartella
+	selezionata.
+
+2 - prendo google maps. Avere cartina ampia. fare alt+stamp per salvare l'imamgine. Prenndo le coordinate dell'angolo in alto a sinistra, prendo anche quelle di imbasso a destra (trovo posizione dell'immagine nella realta. Il programma deve caricare l'immagne nel frame. do limiti con le coordinate all'immagine. 
+	1 click su un punto della cartina e devo dare la longitudine e latitudine
+	2 linaa aereo: punto partenza e arrivo, do velocità dell'aereo e avio simulazione a partire da una certa ora. do una ora e mi dice a che punto è l'aereo
