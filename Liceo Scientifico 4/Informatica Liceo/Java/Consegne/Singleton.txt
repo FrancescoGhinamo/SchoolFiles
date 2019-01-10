@@ -1,0 +1,1 @@
+Mettere un singleton in programmi che gesticon elenchi
