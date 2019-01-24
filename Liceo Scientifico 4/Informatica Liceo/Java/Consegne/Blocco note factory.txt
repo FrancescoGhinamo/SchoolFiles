@@ -1,0 +1,4 @@
+Blocco note
+alla pressione di un pulsanta chiamo funzionalità salva dati, creata con due implementazioni
+1 - salva su file di test
+2 - serializza
