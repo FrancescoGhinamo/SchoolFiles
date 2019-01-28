@@ -1,1 +1,0 @@
-Fare carte identita con pattern factory e pattern singleton
