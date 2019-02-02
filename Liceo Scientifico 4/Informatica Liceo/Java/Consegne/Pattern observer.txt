@@ -1,0 +1,5 @@
+Usare blocco note come comando tail di linux,
+file di testo di log.
+il tail serve per restituire l'utimo pezzo del file
+blocco note è l'osservatore
+l'osservabile deve continuare a leggere un file anche se è arrivato alla fine e quando modifico il file mi aggiunge le righe alla textarea
