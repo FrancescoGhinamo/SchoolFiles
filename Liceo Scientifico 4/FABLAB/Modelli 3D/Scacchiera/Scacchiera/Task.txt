@@ -1,0 +1,6 @@
+- disegnare a partire da modulo base:
+	- angolo alto sinistra
+	- angolo alto destra
+	- angolo basso destra che fa da chiave di volta e blocca tutto (a incastro)
+
+- provare il test del montaggio
