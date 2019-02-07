@@ -4,3 +4,5 @@
 	- angolo basso destra che fa da chiave di volta e blocca tutto (a incastro)
 
 - provare il test del montaggio
+
+- lato: 3 cm
