@@ -1,0 +1,1 @@
+file 6 moduli.stl: in cura ingrandire al 5500%
