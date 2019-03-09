@@ -1,0 +1,301 @@
+50
+5 7 9 10
+3
+ddcac
+dcabbbc
+cdcaddbcc
+dcabbdddac
+7 5 7 9
+5
+dbddcbc
+dbddc
+ddbddca
+aadbddcca
+7 8 10 9
+5
+cbcbdcb
+addbcbdc
+bbcbdcabbb
+bcbdcadbc
+6 6 5 8
+4
+xvsroa
+xvsrwf
+exvsr
+xvsrfpic
+9 5 10 9
+3
+yiffepock
+fepjn
+aghksndfep
+kpctfepas
+8 8 5 8
+4
+sxbyoxub
+kzmpxbyo
+bxbyo
+xbyoqhky
+7 8 5 10
+2
+dcabdba
+abbdcabd
+cbaab
+bcdabbbaca
+8 7 5 7
+5
+rjkpgnlq
+rjkpgbz
+rjkpg
+frjkpgz
+9 5 7 6
+4
+abaaacbab
+aaacb
+daaacdc
+aaacac
+5 10 10 6
+4
+hhtlq
+nshtlqjqrl
+htnwjjhtlq
+syhtlq
+6 8 7 10
+4
+eaofgw
+eaofhnue
+leaofvn
+zsqheaofeh
+10 10 5 6
+4
+zmfveksvrx
+oaktjueksv
+eksvj
+ueksvq
+8 9 7 9
+6
+cacdddaa
+cacddddad
+cacddda
+cacdddbdd
+6 6 8 6
+4
+glzyuu
+eslzyu
+rvlzyuzt
+plzyuv
+7 7 9 8
+4
+vnwuehx
+ihuehxy
+uehxrikuy
+xuehxlnb
+7 7 6 9
+4
+cdaccdc
+aacdacd
+acdaca
+aaacccdac
+6 5 9 8
+5
+wevnfx
+evnfx
+evnfxawht
+ulkevnfx
+5 10 7 7
+4
+glsdf
+plsdfoglwa
+lsdfruj
+wvilsdf
+5 7 9 6
+2
+gtrto
+ygxwdgt
+roehegtch
+rgtniy
+6 8 10 5
+4
+cgbvzz
+nracgbvt
+evnzvicgbv
+cgbvc
+9 10 10 5
+4
+aaacbbcab
+ccdaaacada
+bdaaaaaccd
+aaacd
+7 5 10 10
+3
+baabcda
+bbaad
+dabcdbaacc
+baabdbaabd
+9 10 7 7
+7
+dbdcabcdc
+addbdcabcb
+dbdcabc
+dbdcabc
+7 10 8 10
+6
+xbsubgu
+iakbsubgur
+bsubgune
+tvyfbsubgu
+6 5 5 7
+3
+bdbccd
+bccda
+bccdb
+bbccbbd
+5 8 7 7
+3
+abbcc
+abbcbaca
+bbcabab
+cbbcdbb
+6 8 8 7
+3
+badbac
+aaadbada
+abdddbad
+bccbadd
+8 10 9 6
+6
+ctuqkula
+dguqkularg
+juqkularb
+uqkula
+8 5 9 10
+3
+ynhlpzcv
+knhly
+lplanhlla
+roewnhlabm
+9 6 9 5
+3
+caccadcdc
+dcaccc
+cacacdbad
+cbcac
+6 5 7 8
+4
+ccbacc
+abacc
+cbbaccc
+bacccaab
+7 5 7 10
+3
+qhmsbpy
+wbqhm
+qbeqhmf
+oqagtqhmuv
+5 10 7 10
+3
+wjrut
+itlblabrut
+lmrutln
+syrutyyrxz
+10 8 10 9
+8
+aaabdcbbdc
+aabdcbbd
+aabdcbbdab
+aabdcbbdc
+7 9 9 6
+6
+cbcoxdo
+atbcoxdof
+dbcoxdonq
+bcoxdo
+9 10 10 7
+7
+bgiaeetym
+hoebgiaeet
+ftgbgiaeet
+bgiaeet
+9 7 5 7
+3
+cupoymfig
+oymqtkj
+lloym
+aooymrb
+5 7 7 8
+4
+metqv
+metqbmc
+iojmetq
+zrlwmetq
+10 9 5 7
+4
+ddcdabaada
+ddaadacba
+caada
+baadaaa
+9 7 9 5
+4
+nnsbdeksi
+ciinsbd
+peknsbdch
+fnsbd
+8 7 9 10
+7
+ddcccdda
+dcccdda
+abdcccdda
+dcccddaddc
+8 6 10 10
+6
+fdpuuqdz
+fdpuuq
+pfdpuuqvdx
+rflmfdpuuq
+6 9 10 7
+3
+ccadac
+ddcabdcad
+cacaddbddc
+dacadbd
+8 8 7 6
+4
+baabdaab
+aabaabda
+aabdbda
+dcaabd
+5 9 10 6
+5
+cbccb
+cbccbdcad
+ddcbbcbccb
+bcbccb
+10 10 10 10
+10
+ddabdddadb
+ddabdddadb
+ddabdddadb
+ddabdddadb
+8 7 9 10
+5
+garegyot
+msgareg
+zgaregbhx
+tqvagaregm
+10 8 8 6
+6
+ccaadbddcb
+bbccaadb
+cccaadba
+ccaadb
+9 6 5 10
+2
+urfxojabp
+yxbppa
+mdbpc
+lteljbpfhd
+6 6 10 8
+3
+ugowze
+zyqowz
+mowzkxnocx
+gzfowzgt

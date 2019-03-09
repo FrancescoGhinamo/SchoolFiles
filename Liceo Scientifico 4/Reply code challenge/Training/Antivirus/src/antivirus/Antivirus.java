@@ -111,9 +111,9 @@ public class Antivirus {
 
 	public static void main(String[] args) {
 		Antivirus a = new Antivirus();
-		a.initAntivirus("F:\\School Files\\SchoolFiles\\Liceo Scientifico 4\\Reply code challenge\\Training\\Antivirus\\files\\Input.txt");
+		a.initAntivirus("F:\\School Files\\SchoolFiles\\Liceo Scientifico 4\\Reply code challenge\\Training\\Antivirus\\files\\input-antivirus-5c4a.txt");
 		a.runAntivirus();
-		a.saveOutput("F:\\School Files\\SchoolFiles\\Liceo Scientifico 4\\Reply code challenge\\Training\\Antivirus\\files\\Output.txt");
+		a.saveOutput("F:\\School Files\\SchoolFiles\\Liceo Scientifico 4\\Reply code challenge\\Training\\Antivirus\\files\\output-antivirus-5c4a.txt");
 		
 	}
 
