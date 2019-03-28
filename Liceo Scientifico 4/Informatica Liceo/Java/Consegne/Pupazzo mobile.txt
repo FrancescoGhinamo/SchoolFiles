@@ -1,0 +1,4 @@
+Muovere una pallina sullo schermo
+
+Scaricare un pupazzetto e creo mirror dell'immagine
+visualizzarlo nel frame e farlo muovere con le frecce (aggiungere fotogrammi per la camminata)
