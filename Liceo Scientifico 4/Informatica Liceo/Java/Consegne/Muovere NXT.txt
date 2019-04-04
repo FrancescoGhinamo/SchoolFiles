@@ -1,0 +1,1 @@
+icona nxt, la visualizza in un frame e la muovo con le frecce e contemporaneamente il robot fa lo stesso movimento
