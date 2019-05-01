@@ -1,0 +1,22 @@
+02/07/2018
+ - Accoglienza presso l'ufficio del personale (Dott.ssa Romina Revelli):
+	+ illustrazione planimetria aziendale
+	+ illustrazione regolamento aziendale
+	+ consegna etichetta riconoscimento, chiavetta per distributori e buoni mensa
+	+ illustrazione del servizio mensa
+ - Inserimento nello stage:
+	+ tutor operativo: Stefanio Mazza
+	+ tutor aziendale: Franco Galliano
+	+ ritiro PC da Help Desk
+ - mattino:
+	+ copia del progetto "Plunger Motion Control" sul PC fornito
+	+ customizzazione dell'installazione di Microsoft Visual Studio 2015 per l'apertura e compilazione del progetto
+	+ illustrazione del movimento del Plunger (maschio) nello stampo in funzione di tempo e pressione (fase di attesa, pressata...)
+	+ analisi della classe PlungerCycleInfo nel file di progetto PlungerCycleInfo.cs
+	+ debug della classe utilizzando la modalità "simulatore"
+ - pomeriggio:
+	STEP 1:
+	+ inizio scrittura commenti al codice
+	+ richiesta chiarimenti a Stefano
+	
+	

@@ -1,0 +1,15 @@
+03/07/2018
+ - mattino:
+	+ conclusione della scrittura della documentazione per ogni metodo e attibuto della classe PlungerCycleInfo
+	FINE STEP 1.
+	STEP 2:
+	+ nuova logica del calcolo del Dwell time (tempo di pressata)
+	+ struttura del codice in più funzioni
+ - pomeriggio:
+	+ conclusione della nuova tipologia di calcolo del dwell time
+	+ scrittura algoritmo per calcolo media ponderata a due pesi
+	+ scrittura algoritmo per prova alternativa tra algoritmo dwell time nuovo e vecchio
+	+ debug con output su console per visualizzazione risultati da i due algoritmi di calcolo del dwell time
+	+ comunicazione a Stefano del lavoro compiuto
+	+ apportate migliorie memorizzando i valori di dwell time con i due algoritmi i due oggetti Queue (array o similare) con conseguente calcolo della varianza sui valori registrati (varianza dati da algoritmo vecchio e varianza dati da algoritmo nuovo)
+	+ colloquio con Fabio Galliano per fare il punto della situazione

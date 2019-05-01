@@ -1,0 +1,12 @@
+06/07/2018:
+ - mattino:
+	+ Continuazione sviluppo nuovo algoritmo per dwell time con creazione anche di nuove classi
+	+ test non soddisfaciente, tentativo di individuazione del problema
+	+ aggiornamento del rapporto con il lavoro svolto
+	+ aggiunstamenti al sorgente: funzionamento del codice!
+	+ salvataggio dei file registro dei risultati e registrazione e analisi su Excel
+ - pomeriggio:
+	+ utilimi ritocchi alla nuova funzione
+	+ cambio del font delle referenze a parti di progetto sul rapporto
+	+ nuovi test e registrazione su Excel
+	+ test e correzione nuovo algoritmo in laboratorio

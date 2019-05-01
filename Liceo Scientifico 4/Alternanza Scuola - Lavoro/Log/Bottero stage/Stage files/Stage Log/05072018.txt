@@ -1,0 +1,13 @@
+05/07/2018
+ - mattino:
+	+ rifinitura salvataggio su file dei dati della misuarazione della macchina
+	+ test con simulatore del nuovo tipo di salvataggio dati
+	+ raccolta dati su un nuovo file Excel con grafico...
+	STEP 4:
+	+ stesura rapporto attività di alternanza
+- pomeriggio:
+	+ conclusione rapporto attività svolta
+	FINE STEP 4
+	STEP 5:
+	+ strategia del calcolo del dwell time utilizzando l'estrapolazione della funzione dell'altezza nella pressata
+	+ ricerca di come calcolare come si trova una linea di tendenza

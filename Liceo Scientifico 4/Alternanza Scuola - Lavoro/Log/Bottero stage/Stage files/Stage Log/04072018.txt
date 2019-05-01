@@ -1,0 +1,22 @@
+04/07/2018
+ - mattino:
+	+ traduzione in inglese dei commenti scitti precedentemente agli attributi e metodi della classe
+	STEP 3:
+	+ test degli algoritmi e analisi dei valori della varianza calcolati. Analisi cambiando pesi per la media delle altezze del plunger
+	+ test del programma in laboratorio:
+		- illustrazione funzionamento sezione macchina IS
+		- test connessione alla sezione 2 della macchina
+		- il test non ha avuto successo: terminato con il sollevamento di una eccezione a causa della mancanza di un componente che verrà installato
+	+ tentativo di comprendere la differenza tra le varianze dei dati di dwell time calcolati con algoritmo vecchio e nuovo: varianza vecchia > varianza nuova
+		- utlizzo di un foglio di calcolo Excel
+ - pomeriggio:
+	+ continuazione analisi differenza delle varianze (continuazione lavoro del mattino)
+	STEP 5:
+	+ tentativo di individuazione di una nuova stategia per il calcolo del dwell time
+	STEP 3:
+	+ in laboratorio: attivazione dei plunger e monitoraggio dal software
+	+ registrazione dati su Excel
+	+ problema con movimento plunger Cavità C
+	+ tentativo di salvare dati macchina su file (ricerca in internet) utilizzo classe FileStrem e StreamWriter (riuscito!)
+
+

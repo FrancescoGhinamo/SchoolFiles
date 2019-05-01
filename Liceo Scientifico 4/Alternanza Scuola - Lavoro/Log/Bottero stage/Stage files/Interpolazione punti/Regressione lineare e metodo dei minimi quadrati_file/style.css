@@ -1,0 +1,121 @@
+@import url( https://fonts.googleapis.com/css?family=Lusitana );
+h1 {
+	text-align: left; color: rgb(68, 85, 68); line-height: 135%; letter-spacing: 3px; font-family: "Times New Roman", Times, serif; font-size: 13pt; text-decoration: underline;
+}
+.E {
+	color: rgb(0, 0, 0); line-height: 150%; font-family: "Courier New", Courier, mono; font-size: 13pt; font-style: normal; font-weight: bold;
+}
+.num {
+	text-align: left; color: dimgray; letter-spacing: 1px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-style: italic;
+}
+.titolo {
+	text-align: justify; color: indianred; letter-spacing: 2px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-variant: small-caps; font-weight: bold; text-decoration: underline; border-bottom-color: indianred; border-bottom-width: 2px; border-bottom-style: solid;
+}
+.titolohome {
+	text-align: justify; color: rgb(68, 85, 68); letter-spacing: 2px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-variant: small-caps; font-weight: bold; text-decoration: underline; border-bottom-color: gray; border-bottom-width: 2px; border-bottom-style: solid;
+}
+.testo {
+	text-align: justify; color: rgb(68, 85, 68); line-height: 130%; font-family: "Palatino Linotype" , Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-style: italic; font-weight: lighter;
+}
+.term {
+	color: rgb(208, 217, 202); text-transform: capitalize; letter-spacing: 1px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; font-variant: small-caps; font-weight: bold; text-decoration: none; margin-left: 10px;
+}
+.M {
+	color: maroon; line-height: 150%; letter-spacing: 1px; font-family: cochin,baskerville,"palatino linotype",georgia,serif; font-size: 12pt; font-variant: small-caps; font-weight: bold;
+}
+.W {
+	color: black; line-height: 150%; font-family: Georgia, "Times New Roman", Times, serif; font-size: 12pt; font-variant: small-caps; font-weight: bold;
+}
+p {
+	color: rgb(0, 0, 0); line-height: 150%; font-family: "Lusitana", serif,"Palatino Linotype", Georgia, "Times New Roman", "Palatino Linotype", Times, serif; font-size: 17px; font-weight: normal; margin-right: 10px;
+}
+.x {
+	color: rgb(0, 0, 0); line-height: 150%; font-family: "Lusitana", serif,"Palatino Linotype", Georgia, "Times New Roman", "Palatino Linotype", Times, serif; font-size: 17px; font-weight: normal; margin-right: 10px;
+}
+.expi {
+	color: rgb(0, 0, 0); line-height: 150%; font-family: "Palatino Linotype", Georgia, "Times New Roman", "Palatino Linotype", Times, serif; font-size: 12pt; font-weight: bold;
+}
+.SOTTOLINEATO {
+	border-bottom-color: black; border-bottom-width: 2px; border-bottom-style: solid;
+}
+.EVIDENTE {
+	background: rgb(225, 235, 219); padding: 3px;
+}
+.zen {
+	color: navy; line-height: 18pt; letter-spacing: 1px; font-family: "Times New Roman", Times, serif, Georgia; font-size: 13pt; font-weight: bold; text-decoration: none;
+}
+.mat {
+	background: rgb(178, 190, 169); text-align: justify; color: maroon; letter-spacing: 2px; font-family: "Times New Roman", Times, serif, Georgia; font-size: 14pt; font-variant: small-caps; font-weight: bold; border-right-color: darkslategray; border-bottom-color: darkslategray; border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; display: block;
+}
+.arg {
+	background: rgb(210, 220, 204); text-align: justify; color: black; letter-spacing: 1px; font-family: "Times New Roman", Times, serif, Georgia; font-size: 13pt; font-weight: bold; border-right-color: darkslategray; border-bottom-color: darkslategray; border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; display: block;
+}
+a.clg:link {
+	color: rgb(51, 102, 102); line-height: 18pt; letter-spacing: 1px; font-family: "Times New Roman", Times, serif, Georgia; font-size: 12pt; font-weight: bold; text-decoration: none; border-right-color: rgb(247, 250, 245); border-bottom-color: rgb(247, 250, 245); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; display: block;
+}
+a.clg:visited {
+	color: rgb(51, 102, 102); line-height: 18pt; letter-spacing: 1px; font-family: "Times New Roman", Times, serif, Georgia; font-size: 12pt; font-weight: bold; text-decoration: none; border-right-color: rgb(247, 250, 245); border-bottom-color: rgb(247, 250, 245); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; display: block;
+}
+a.clg:hover {
+	background: rgb(199, 218, 195); color: rgb(51, 102, 102); line-height: 18pt; letter-spacing: 1px; font-family: "Times New Roman", Times, serif, Georgia; font-size: 12pt; font-weight: bold; text-decoration: none; border-right-color: darkslategray; border-bottom-color: darkslategray; border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; display: block;
+}
+a.disclaimer:link {
+	color: rgb(208, 217, 202); font-family: "Palatino Linotype" , Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-style: italic; font-weight: lighter; text-decoration: none;
+}
+a.disclaimer:visited {
+	color: rgb(208, 217, 202); font-family: "Palatino Linotype" , Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-style: italic; font-weight: lighter; text-decoration: none;
+}
+a.disclaimer:hover {
+	color: brown; font-family: "Palatino Linotype" , Georgia, "Times New Roman", Times, serif; font-size: 11pt; font-style: italic; font-weight: lighter; text-decoration: none;
+}
+a.tab:link {
+	color: rgb(68, 85, 68); text-decoration: none; display: block;
+}
+a.tab:visited {
+	color: rgb(68, 85, 68); text-decoration: none; display: block;
+}
+a.tab:hover {
+	background: rgb(210, 220, 204); color: rgb(68, 85, 68); text-decoration: none; display: block;
+}
+.t {
+	text-align: left; color: rgb(68, 85, 68); line-height: 150%; letter-spacing: 3px; font-family: "Times New Roman", Times, serif; font-size: 13pt; font-weight: bold;
+}
+a.tab2:link {
+	color: rgb(208, 217, 202); letter-spacing: 1px; padding-top: 10px; padding-bottom: 10px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 14px; font-weight: bold; text-decoration: none; display: block;
+}
+a.tab2:visited {
+	color: rgb(208, 217, 202); letter-spacing: 1px; padding-top: 10px; padding-bottom: 10px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 14px; font-weight: bold; text-decoration: none; display: block;
+}
+a.tab2:hover {
+	color: white; letter-spacing: 1px; padding-top: 11px; padding-bottom: 11px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 14px; font-weight: bold; text-decoration: none; display: block; background-color: rgb(51, 102, 102);
+}
+html {
+	margin: 0px; padding: 0px; width: 100%; height: 100%;
+}
+body {
+	margin: 0px; padding: 0px; width: 100%; height: 100%;
+}
+table.full-height {
+	border: 3px solid rgb(68, 85, 68); border-image: none; width: 100%; height: 100%;
+}
+.wireframemenu {
+	width: 180px; border-top-color: rgb(68, 85, 68); border-top-width: 1px; border-bottom-width: 0px; border-top-style: solid; background-color: rgb(134, 153, 120);
+}
+* html .wireframemenu {
+	width: 180px;
+}
+.wireframemenu ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.wireframemenu a {
+	font: small-caps bold 14px/normal Georgia, "Times New Roman", Times, serif; width: 100%; color: rgb(208, 217, 202); text-transform: capitalize; letter-spacing: 1px; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; text-decoration: none; border-bottom-color: rgb(68, 85, 68); border-bottom-width: 1px; border-bottom-style: solid; display: block; font-size-adjust: none; font-stretch: normal;
+}
+html > body .wireframemenu a {
+	width: auto;
+}
+.wireframemenu a:hover {
+	color: white; background-color: rgb(51, 102, 102);
+}
+input.txtx {
+	color: rgb(68, 102, 68); font-family: arial, verdana, ms sans serif; font-size: 12pt; font-weight: bold; background-color: rgb(204, 255, 0);
+}

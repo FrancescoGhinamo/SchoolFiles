@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<!-- saved from url=(0044)http://www.edutecnica.it/calcolo/reg/reg.htm -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ <TITLE>Regressione lineare e metodo dei minimi quadrati</TITLE> 
+<META http-equiv="Content-type" content="text/html; charset=iso-8859-1"> 
+<META http-equiv="Content-Language" content="it"> 
+<META name="Robots" content="All"> 
+<META name="Description" content="&#10;la connessione tra due variabili, che può essere effettuato o ricercando se una variabile dipende &#10;da un'altra o se le due variabili si influenzano reciprocamente.&#10;Lo studio della regressione consiste nella determinazione di una funzione &#10;matematica che esprima la relazione tra due variabili.&#10;La regressione, è molto utile, perché permette di valutare, entro i &#10;limiti dell'intervallo dei dati rilevati, il valore della variabile &#10;dipendente al variare della variabile indipendente. &#10;La correlazione può, invece, essere assimilata alla 'forza' o all'intensità &#10;che interviene nel legame tra due variabili. La correlazione può essere &#10;misurata attraverso vari indici, il più importante dei quali è il coefficiente &#10;di correlazione lineare."> 
+<META name="Keywords" content="&#10;regressione, &#10;correlazione,&#10;connessione tra variabili statistiche,&#10;probabilità,&#10;metodo dei minimi quadrati,&#10;media, &#10;deviazione standard, &#10;scarto quadratico medio, &#10;curva di gauss,&#10;distribuzione chi-quadro,&#10;varianza&#10;"> 
+<META name="Owner" content="edutecnica"> 
+<META name="Author" content="edutecnica"> 
+<META name="Copyright" content="edutecnica"> 
+<META http-equiv="imagetoolbar" content="no"> 
+<STYLE type="text/css">
+@import "../../style.css";
+</STYLE>
+ 
+<STYLE>
+body {font-family: "Courier New", Courier, mono;font-size:14px;}
+
+.AES{
+background:#FF9;padding:3px;
+border-bottom:2px solid black;
+}
+
+img.ARIQUADRO{
+border:2px solid indianred;
+padding:8px;
+background:#FF9;
+}
+img.AFORMULA{
+vertical-align:middle;
+padding-bottom:8px;
+}
+.AEVIDENZIATO{
+background:#FF9;padding:3px;
+}
+.ASOTTOLINEATO{
+border-bottom:2px solid black;
+}
+.ANAVY{
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: 12pt;
+line-height: 150%;
+font-weight: bold;
+font-variant:small-caps;
+color:yellow; 
+background:navy;
+padding-bottom:3px;
+}
+
+a.jk:link {color:red;text-decoration:none;}
+a.jk:visited {color:red;text-decoration:none;}
+a.jk:hover {color:red;border-bottom:3px solid red}
+
+
+input,select,option,button{font:bold 14px Arial ;color:darkslategray;} 
+#out,#area{font:bold 14px Arial ;color:darkslategray;line-height:135%;} 
+</STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY topmargin="0" leftmargin="0" bgcolor="#ffffff">
+<SCRIPT src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/cookiechoices.js"></SCRIPT>
+ 
+<SCRIPT>
+document.addEventListener('DOMContentLoaded', function(event) {
+cookieChoices.showCookieConsentBar('Questo sito fa uso di cookie.Proseguendo nella navigazione si accetta l’uso di cookie.',
+      'CHIUDI', 'INFORMAZIONI', 'http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3881513');
+  });
+</SCRIPT>
+ 
+<TABLE class="full-height" border="0" cellspacing="0" cellpadding="0">
+  <TBODY>
+  <TR bgcolor="#869978">
+    <TD height="40" colspan="3"><A 
+      href="http://www.edutecnica.it/index.php"><IMG width="40" height="37" 
+      align="absmiddle" style="margin-left: 10px;" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/logus.jpg" 
+      border="0"></A><FONT class="term">edutecnica</FONT></TD></TR>
+  <TR>
+    <TD width="165" align="left" valign="top" style="border-right-color: rgb(68, 85, 68); border-right-width: 1px; border-right-style: solid;" 
+    bgcolor="#ffffff">
+      <DIV class="wireframemenu">
+      <UL>
+        <LI><A href="http://www.edutecnica.it/index.php">index</A></LI>
+        <LI><A href="http://www.edutecnica.it/calcolo.htm">calcolo</A></LI>
+        <LI><A href="http://www.edutecnica.it/sistemi.htm">sistemi</A></LI>
+        <LI><A 
+        href="http://www.edutecnica.it/informatica.htm">informatica</A></LI>
+        <LI><A 
+        href="http://www.edutecnica.it/elettrotecnica.htm">elettrotecnica</A></LI>
+        <LI><A href="http://www.edutecnica.it/meccanica.htm">Meccanica</A></LI>
+        <LI><A 
+        href="http://www.edutecnica.it/calcolo/reg/formula.htm">matematica</A></LI>
+        <LI><A 
+        href="http://www.edutecnica.it/elettronica.htm">elettronica</A></LI>
+        <LI><A href="http://www.edutecnica.it/chimica.htm">chimica</A></LI>
+        <LI><A href="http://www.edutecnica.it/play.htm">play</A></LI>
+        <LI><A href="http://www.edutecnica.it/apps.htm">apps</A></LI>
+        <LI><A href="http://www.edutecnica.it/pdf/pdf.php">pdf</A></LI>
+        <LI><A href="http://www.edutecnica.it/maturita.htm">esami di 
+        maturità</A></LI>
+        <LI><A href="http://www.edutecnica.it/info.htm">info</A></LI>
+        <LI><A 
+      href="http://www.edutecnica.it/macchine.htm">Macchine</A></LI></UL></DIV></TD>
+    <TD width="20" align="left" valign="top" style="border-top-color: rgb(68, 85, 68); border-top-width: 1px; border-top-style: solid;" 
+    bgcolor="#ffffff">
+      <P>&nbsp;</P></TD>
+    <TD align="left" valign="top" style="border-top-color: rgb(68, 85, 68); border-top-width: 1px; border-top-style: solid;" 
+    bgcolor="#ffffff"><BR>
+      <DIV style="max-width: 800px;" ;="">
+      <P><SPAN class="titolo">Connessione tra variabili statistiche 
+      &nbsp;</SPAN><U 
+      style="color: indianred;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U>         
+      </P>
+      <P>Un importante studio, nel calcolo statistico è la connessione tra due   
+              variabili, che può essere effettuato o ricercando se una variabile 
+      dipende           da un'altra o se le due variabili si influenzano 
+      reciprocamente.         
+      <P class="AEVIDENZIATO">Lo studio della regressione consiste nella 
+      determinazione           di una funzione matematica che esprime la 
+      relazione tra due variabili.          
+      <P>La <SPAN class="AES">regressione</SPAN>, è molto utile, perché          
+       permette di valutare, entro i limiti dell'intervallo dei dati rilevati,   
+              il valore della variabile dipendente al variare della variabile 
+      indipendente.          
+      <P>La <SPAN class="AES">correlazione</SPAN> può, invece, essere           
+      assimilata alla 'forza' o all'intensità che interviene nel legame tra      
+           due variabili. La correlazione può essere misurata attraverso vari 
+      indici,           il più importante dei quali è il <SPAN class="AEVIDENZIATO">coefficiente 
+                di correlazione lineare</SPAN>.          
+      <P>Lo studio della correlazione, può spesso precedere quello della         
+        regressione, perché si tenta di confrontare una variabile con diverse    
+             altre per trovare la migliore connessione.          
+      <P><SPAN class="titolo">Regressione &nbsp;</SPAN><U style="color: indianred;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U> 
+              
+      <P>Ipotizziamo due variabili statistiche X ed Y considerando le coppie     
+            (x<SUB>i</SUB>,y<SUB>i</SUB>) associate. Per prima cosa occorre fare 
+                un diagramma rappresentativo dei valori 
+      (x<SUB>i</SUB>,y<SUB>i</SUB>)           rilevati, ottenendo in questo modo 
+      il diagramma a dispersione.          
+      <P><IMG width="298" height="254" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/1.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG 
+      width="298" height="254" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/2.png"> 
+              
+      <P><IMG width="298" height="254" align="left" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/3.png"> 
+              
+      <P>&nbsp;        
+      <P>Se esiste una relazione lineare, i punti si distribuiscono vicino ad    
+             una retta, come si vede dai primi due schemi.          
+      <P>Se invece, i punti sono molto dispersi, come nel terzo schema, non      
+           esiste alcuna relazione          
+      <P>&nbsp;         
+      <P>&nbsp;        
+      <P>&nbsp;        
+      <P><SPAN class="titolo">Metodo dei minimi quadrati &nbsp;</SPAN><U style="color: indianred;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U> 
+              
+      <P>Se in corrispondenza dei valori x<SUB>i</SUB> rilevati si hanno .       
+         
+      <P><IMG width="190" height="66" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/4.png"> 
+              
+      <P>Per il metodo dei minimi quadrati l'accostamento migliore viene 
+      ottenuto           minimizzando la somma dei quadrati delle differenze tra 
+      i dati osservati           e i dati teorici.         
+      <P><IMG width="345" height="237" align="absmiddle" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/6.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG 
+      width="187" height="60" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/5.png"> 
+              
+      <P>L'applicazione più comune del metodo dei minimi quadrati, consiste      
+           nel ricondurre il legame tra le due variabili x ed y ad una funzione  
+               lineare del tipo y=a+bx. Si deve dunque minimizzare la funzione:  
+             
+      <P><IMG width="218" height="60" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/7.png"> 
+              
+      <P>per il calcolo del minimo, si dovranno valutare le derivate parziali    
+             prime rispetto ad a e b di questa funzione e dopo aver applicato 
+      gli           opportuni criteri si dimostra che questa funzione ha minimo 
+      per i valori           a,b:         
+      <P><IMG width="262" height="181" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/8.png"> 
+              
+      <P>l'equazione della retta interpolante ( o perequatrice tra i punti noti  
+               ) è:         
+      <P><IMG width="136" height="30" align="absmiddle" class="ARIQUADRO" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/9.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dove&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG 
+      width="283" height="84" align="absmiddle" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/10.png"> 
+              
+      <P>è possibile dimostrare che i valori a e b possono essere espressi anche 
+                in funzione degli scarti x' ed y':         
+      <P><IMG width="299" height="101" align="absmiddle" class="ARIQUADRO" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/11.png"> 
+              
+      <P>Da quest'ultima forma rappresentativa si riesce ad osservare che        
+ 
+      <P><IMG width="244" height="120" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/12.png"> 
+              
+      <P>&#963;<SUB>x</SUB><SUP>2</SUP>= varianza di X mentre il numeratore           
+      viene definito covarianza di X ed Y.         
+      <P><IMG width="215" height="64" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/13.png"> 
+              
+      <P>Mentre la varianza misura la variabilità dei valori di X rispetto al    
+             valor medio, la covarianza esprime la variabilità congiunta delle 
+      coppie           (x,y) di valori corrispondenti rispetto al loro valor 
+      medio:          
+      <P><IMG width="64" height="66" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/14.png"> 
+              
+      <P>Il coefficiente b della retta interpolante esprime quindi la 
+      variabilità           congiunta delle due variabili X ed Y rapportata alla 
+      variabilità della           sola X.         
+      <P>In questo caso è stata studiata la retta di regressione di Y rispetto   
+              ad X con b definito come coefficiente di regressione di Y rispetto 
+      ad           X. In modo analogo si può studiare la retta di regressione di 
+      X rispetto           ad Y, di equazione:         
+      <P><IMG width="81" height="30" align="absmiddle" class="ARIQUADRO" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/15.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                 <IMG width="303" height="101" align="absmiddle" class="ARIQUADRO" 
+      src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/16.png"> 
+              
+      <P>La retta di regressione di X rispetto ad Y si può anche scrivere come   
+            
+      <P><IMG width="137" height="30" class="ARIQUADRO" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/18.png"> 
+              
+      <P>d viene detto coefficiente di regressione di X rispetto ad Y. <BR>      
+          I due coefficienti b e d hanno lo stesso segno, perché questo dipende  
+               dal numeratore che è uguale. <BR>          Se b e d sono positivi 
+      quando una variabile cresce, cresce anche l'altra,           se invece 
+      sono negativi, quando una variabile cresce, l'altra diminuisce.           
+      In analogia alla retta di regressione di Y rispetto ad X si può dimostrare 
+                che è          
+      <P><IMG width="262" height="182" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/17.png"> 
+              
+      <P><FONT color="teal"><B><FONT 
+      style="background: teal; color: yellow;">&nbsp;&nbsp;</FONT></B><FONT 
+      style="background: teal; color: yellow;">Esempio</FONT><B><FONT style="background: teal; color: yellow;">&nbsp;&nbsp;</FONT></B></FONT>: 
+                studiare le rette di regressione delle due variabili          
+      <TABLE width="231" border="0" cellspacing="1" cellpadding="3">
+        <TBODY>
+        <TR>
+          <TD width="31" bgcolor="teal">
+            <DIV align="center"><FONT color="white">x</FONT></DIV></TD>
+          <TD width="35" bgcolor="#ccffcc">
+            <DIV align="center">25</DIV></TD>
+          <TD width="40" bgcolor="#ccffcc">
+            <DIV align="center">36</DIV></TD>
+          <TD width="34" bgcolor="#ccffcc">
+            <DIV align="center">39</DIV></TD>
+          <TD width="44" bgcolor="#ccffcc">
+            <DIV align="center">50</DIV></TD>
+          <TD width="47" bgcolor="#ccffcc">
+            <DIV align="center">50</DIV></TD></TR>
+        <TR>
+          <TD width="31" bgcolor="teal">
+            <DIV align="center"><FONT color="white">y</FONT></DIV></TD>
+          <TD width="35" bgcolor="#99cc66">
+            <DIV align="center">12</DIV></TD>
+          <TD width="40" bgcolor="#99cc66">
+            <DIV align="center">21</DIV></TD>
+          <TD width="34" bgcolor="#99cc66">
+            <DIV align="center">27</DIV></TD>
+          <TD width="44" bgcolor="#99cc66">
+            <DIV align="center">42</DIV></TD>
+          <TD width="47" bgcolor="#99cc66">
+            <DIV align="center">48</DIV></TD></TR></TBODY></TABLE>
+      <P><IFRAME width="640" height="280" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/regxls.htm" 
+      frameborder="0" scrolling="no"></IFRAME>         
+      <P align="left">&nbsp; </P></DIV><!-- 800 -->       </TD></TR>
+  <TR>
+    <TD height="40" style="border-top-color: black; border-top-width: 1px; border-top-style: solid;" 
+    bgcolor="#869978"><A href="http://www.edutecnica.it/index.php"><IMG width="40" 
+      height="37" align="absmiddle" style="margin-left: 10px;" src="Regressione%20lineare%20e%20metodo%20dei%20minimi%20quadrati_file/logus.jpg" 
+      border="0"></A><FONT class="term">edutecnica</FONT></TD>
+    <TD height="40" style="border-top-color: black; border-top-width: 1px; border-top-style: solid;" 
+    bgcolor="#869978" colspan="3">
+      <TABLE height="40" border="0" cellspacing="0" cellpadding="0">
+        <TBODY>
+        <TR>
+          <TD width="280">
+            <DIV align="center"><A class="tab2" href="http://www.edutecnica.it/index.php" 
+            target="_top">INDEX</A></DIV></TD>
+          <TD width="281">
+            <DIV align="center"><A class="tab2" href="http://www.edutecnica.it/calcolo.htm" 
+            target="_top">CALCOLO</A></DIV></TD>
+          <TD width="281">
+            <DIV align="center"><A class="tab2" href="http://www.edutecnica.it/calcolo/regx/regx.htm">ESERCIZI</A></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,2 @@
+Open solution: DfsManagerSln
+Path: Control\ControlPortable\PlungerCycle\PlungerCycleInfo.cs
